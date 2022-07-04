@@ -1,7 +1,3 @@
-// const spade = document.querySelector('#spade')
-// const club = document.querySelector('#club')
-// const heart = document.querySelector('#heart')
-// const diamond = document.querySelector('#diamond')
 const horses = JSON.parse(sessionStorage.getItem('HORSES'))
 const track = document.querySelector('main')
 const deck = document.querySelector('#card-deck')
@@ -9,12 +5,6 @@ const discard = document.querySelector('#discard')
 const cardChoices = Object.keys(horses)
 const raceAgain = document.querySelector('#raceAgain')
 
-// const flipCounts = {
-//   spade: null,
-//   club: null,
-//   heart: null,
-//   diamond: null
-// }
 ///////////Globals above
 
 console.log(horses)
@@ -44,13 +34,21 @@ const poolWagers = () => {
     .reduce((accumulator, value) => {
       return accumulator + value
     }, 0)
-  console.log(allWagers)
+  // console.log(parseInt(allWagers, 10))
+  return parseInt(allWagers, 10)
+}
+
+const payout = (winningHorse) => {
+  let pool = poolWagers()
+  let winnersWager = parseInt(horses[`${winningHorse}`].wagerAmount, 10)
+  console.log(pool - winnersWager)
 }
 
 const checkWinner = (horse) => {
   if (horses[`${horse}`].flipCount === 8) {
     deck.removeEventListener('click', moveHorse)
     console.log(horses[`${horse}`].name + ' wins!')
+    payout(horse)
   }
 }
 
@@ -65,74 +63,12 @@ const moveHorse = () => {
         'spot' + (horses[`${randomHorse}`].flipCount - 1)
       )
       addClass.classList.add('spot' + horses[`${randomHorse}`].flipCount)
-      console.log(horses[`${randomHorse}`])
+      // console.log(horses[`${randomHorse}`])
     }
     checkWinner(randomHorse)
   })
 }
 
-//   if (flipCounts.spade === 8) {
-//     console.log('Spade wins!')
-//     deck.removeEventListener('click', raceHorses)
-//     raceAgain.style.display = 'initial'
-//   }
-//   if (flipCounts.club === 8) {
-//     console.log('Club wins!')
-//     deck.removeEventListener('click', raceHorses)
-//     raceAgain.style.display = 'initial'
-//   }
-//   if (flipCounts.heart === 8) {
-//     console.log('Heart wins!')
-//     deck.removeEventListener('click', raceHorses)
-//     raceAgain.style.display = 'initial'
-//   }
-//   if (flipCounts.diamond === 8) {
-//     console.log('Diamond wins!')
-//     deck.removeEventListener('click', raceHorses)
-//     raceAgain.style.display = 'initial'
-//   }
-// }
-//   if (card === spade) {
-//     spade.classList.remove()
-//     spade.classList.add(`spot${flipCounts.spade}`)
-//   } else if (horse === club) {
-//     club.classList.remove()
-//     club.classList.add(`spot${flipCounts.club}`)
-//   } else if (horse === heart) {
-//     heart.classList.remove()
-//     heart.classList.add(`spot${flipCounts.heart}`)
-//   } else if (horse === diamond) {
-//     diamond.classList.remove()
-//     diamond.classList.add(`spot${flipCounts.diamond}`)
-//   }
-// }
-
-// const raceHorses = () => {
-//   let randomCard = chooseRandomCard()
-//   switch (randomCard) {
-//     case spade:
-//       ++flipCounts.spade
-//       checkWinner('spade')
-//       moveHorse(randomCard)
-//       break
-//     case club:
-//       ++flipCounts.club
-//       checkWinner('club')
-//       moveHorse(randomCard)
-//       break
-//     case heart:
-//       ++flipCounts.heart
-//       checkWinner('heart')
-//       moveHorse(randomCard)
-//       break
-//     case diamond:
-//       ++flipCounts.diamond
-//       checkWinner('diamond')
-//       moveHorse(randomCard)
-//   }
-//   console.log(randomCard)
-//   console.log(flipCounts)
-// }
 //////////Fucntions above
 
 deck.addEventListener('click', moveHorse)
