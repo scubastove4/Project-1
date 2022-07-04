@@ -6,12 +6,12 @@ const deck = document.querySelector('#card-deck')
 const discard = document.querySelector('#discard')
 const cardChoices = [spade, club, heart, diamond]
 const raceAgain = document.querySelector('#raceAgain')
-const flipCounts = {
-  spade: null,
-  club: null,
-  heart: null,
-  diamond: null
-}
+// const flipCounts = {
+//   spade: null,
+//   club: null,
+//   heart: null,
+//   diamond: null
+// }
 ///////////Globals above
 
 const chooseRandomCard = () => {
