@@ -12,7 +12,7 @@
 
 ![Kentucky_Derby](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.covers.com%2Fcms%2Fcovers%2Fba2c2dec-b1cd-4104-931c-337f4df39e09.jpg&f=1&nofb=1)
 
-This project brings the world's most famous horse race right to your table top. A series of card flips will determine who will bring home the Garland of Roses... and more importantly the "money."
+This project brings the world's most famous horse race right to your ~~table~~ desktop. A series of card flips will determine who will bring home the Garland of Roses... and more importantly the "money."
 
 ---
 
@@ -31,15 +31,19 @@ As you enter "Churchill Downs," you first pass by the stables, where you get to 
 
 On the next screen your horses will be assigned a lane based on the order they qualified for the race. Click the deck of cards on the bottom left; a number that corresponds with a horse will be randomly selected. Whichever horse matches that number wil move forward 1 length. Whoever makes it 8 lengths first is the winner, and whoever placed their wagers on that horse collects all of the losers points!
 
-## **_Screenshots_**
+## **_Screenshots (Better Images Pending)_**
 
-### Image Header 1
+### Qualifying Horses & Making Wagers
 
-![Funny_Dog](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fphotos%2Ffrench-bulldog-enjoying-the-car-ride-picture-id1263789446%3Fk%3D20%26m%3D1263789446%26s%3D612x612%26w%3D0%26h%3DlrUOjcxyM-mAcgZRKoMq6sxDZms7Jt8J3AROeFcLagE%3D&f=1&nofb=1)
+![Enter_Horse_Names](Enter-Horse-Name.png)
+![Wagers_Plus_Horse_Names](Wagers-Plus-Created-Horses.png)
+![Send_horses_to_posts](Send-horses-to-posts.png)
 
-### Image Header 2
+### Time to Race!
 
-![Donut](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcliparts.co%2Fcliparts%2FBcg%2Frqj%2FBcgrqjA7i.gif&f=1&nofb=1)
+![Start_of_Race](Start-of-Race.png)
+![Mid-Race](Mid-Race.png)
+![End-of-Race](End-of-Race.png)
 
 ---
 
