@@ -18,6 +18,7 @@ const createHorse = () => {
     newDiv.classList.add('size')
     newDiv.id = `horse${index}`
   })
+  sessionStorage.clear()
 }
 
 const chooseRandomCard = () => {
@@ -49,6 +50,7 @@ const checkWinner = (horse) => {
     deck.removeEventListener('click', moveHorse)
     console.log(horses[`${horse}`].name + ' wins!')
     payout(horse)
+    raceAgain.style.display = 'initial'
   }
 }
 

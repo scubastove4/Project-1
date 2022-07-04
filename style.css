@@ -35,6 +35,30 @@ main {
   align-self: stretch;
 }
 
+#horse4 {
+  grid-row-start: 5;
+  grid-row-end: span 1;
+  align-self: stretch;
+}
+
+#horse5 {
+  grid-row-start: 6;
+  grid-row-end: span 1;
+  align-self: stretch;
+}
+
+#horse6 {
+  grid-row-start: 7;
+  grid-row-end: span 1;
+  align-self: stretch;
+}
+
+#horse7 {
+  grid-row-start: 8;
+  grid-row-end: span 1;
+  align-self: stretch;
+}
+
 .post {
   grid-column-end: span 1;
 }
