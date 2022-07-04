@@ -49,10 +49,12 @@ On the next screen your horses will be assigned a lane based on the order they q
 
 ## **_Task List(s)_**
 
-| Future Updates | Completed Updates           | Canceled Updates                |
-| -------------- | --------------------------- | ------------------------------- |
-| Update 1       | :heavy_check_mark: Update n | :heavy_check_mark: ~~Canceled~~ |
-| Update 2       |
+| Future Updates                         | Completed Updates         | Canceled Updates                         |
+| -------------------------------------- | ------------------------- | ---------------------------------------- |
+| Choose race track option               | <!--:heavy_check_mark:--> | <!-- :heavy_check_mark: ~~Canceled~~ --> |
+| Have horse slide across track          |
+| Real-time weather affecting background |
+| Run the Triple Crown                   |
 
 ## <!-- checkbox wasn't working with - [ ] or - [x] inside table, so i added emojis. Help from https://stackoverflow.com/questions/47344571/how-to-draw-checkbox-or-tick-mark-in-github-markdown-table (linked below)-->
 
