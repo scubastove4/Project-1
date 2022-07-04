@@ -71,8 +71,13 @@ oneDollar.addEventListener('click', addOne)
 fiveDollars.addEventListener('click', addFive)
 tenDollars.addEventListener('click', addTen)
 enterCustomWager.addEventListener('click', () => {
-  wagerAmounts.custom = parseInt(customWager.value, 10)
-  wager += wagerAmounts.custom
+  if (isNaN(customWager.value)) {
+    alert('Please enter a number')
+  } else {
+    wagerAmounts.custom = parseInt(customWager.value, 10)
+    wager += wagerAmounts.custom
+  }
+  customWager.value = ''
 })
 
 chooseHorse.forEach((horse) => {
