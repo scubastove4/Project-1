@@ -84,19 +84,19 @@ chooseHorse.forEach((horse) => {
   horse.addEventListener('click', () => {
     switch (horse) {
       case chooseSpade:
-        spadeWager = wager
+        spadeWager += wager
         emptyWager()
         break
       case chooseClub:
-        clubWager = wager
+        clubWager += wager
         emptyWager()
         break
       case chooseHeart:
-        heartWager = wager
+        heartWager += wager
         emptyWager()
         break
       case chooseDiamond:
-        diamondWager = wager
+        diamondWager += wager
         emptyWager()
         break
     }
