@@ -1,11 +1,13 @@
-const spade = document.querySelector('#spade')
-const club = document.querySelector('#club')
-const heart = document.querySelector('#heart')
-const diamond = document.querySelector('#diamond')
+// const spade = document.querySelector('#spade')
+// const club = document.querySelector('#club')
+// const heart = document.querySelector('#heart')
+// const diamond = document.querySelector('#diamond')
 const deck = document.querySelector('#card-deck')
 const discard = document.querySelector('#discard')
-const cardChoices = [spade, club, heart, diamond]
+const cardChoices = []
 const raceAgain = document.querySelector('#raceAgain')
+const horses = JSON.parse(sessionStorage.getItem('HORSES'))
+
 // const flipCounts = {
 //   spade: null,
 //   club: null,
@@ -13,6 +15,8 @@ const raceAgain = document.querySelector('#raceAgain')
 //   diamond: null
 // }
 ///////////Globals above
+
+console.log(horses)
 
 const chooseRandomCard = () => {
   const random = Math.ceil(Math.random() * cardChoices.length - 1)

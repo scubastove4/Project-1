@@ -10,6 +10,7 @@ const fiveDollars = document.querySelector('#five-dollars')
 const tenDollars = document.querySelector('#ten-dollars')
 const customWager = document.querySelector('#custom-wager')
 const enterCustomWager = document.querySelector('#for-custom-wager')
+const post = document.querySelector('#post')
 const test = document.querySelector('#test')
 let wager = null
 // let spadeWager = null
@@ -48,11 +49,11 @@ const addHorses = () => {
   newHorseButton.classList.add('choose-horse')
   newHorseButton.id = `horse${chooseHorses.length - 1}`
   newHorseButton.innerText = addHorse.value.toUpperCase()
-  // newHorses.push(newHorseButton)
   horses[`${newHorseButton.id}`] = new Horse(`${addHorse.value}`)
   addHorse.value = ''
-  console.log(chooseHorses)
-  // console.log(horses['horse1'].name)
+  if (Object.keys(horses).length === 8) {
+    forAddHorse.removeEventListener('click', addHorses)
+  }
 }
 
 const addOne = () => {
@@ -74,18 +75,6 @@ const emptyWager = () => {
 //////////Functions above
 
 forAddHorse.addEventListener('click', addHorses)
-// horses['horse' + Object.keys(horses).length] = new Horse(`${addHorse.value}`)
-// // horses.push(horse)
-// const newHorseButton = document.createElement('button')
-// const horseButtons = document.querySelector('#horse-buttons')
-// horseButtons.appendChild(newHorseButton)
-// newHorseButton.classList.add('choose-horse')
-// newHorseButton.id = `horse${Object.keys(horses).length - 1}`
-// newHorseButton.innerText = addHorse.value.toUpperCase()
-// addHorse.value = ''
-// const chooseHorse = document.querySelectorAll('.choose-horse')
-// console.log(chooseHorse)
-// })
 
 oneDollar.addEventListener('click', addOne)
 fiveDollars.addEventListener('click', addFive)
@@ -110,6 +99,12 @@ document.addEventListener('click', (e) => {
 })
 
 // delegation help from https://www.youtube.com/watch?v=XF1_MlZ5l6M
+
+post.addEventListener('click', () => {
+  sessionStorage.setItem('HORSES', JSON.stringify(horses))
+})
+
+// sessionStorage help https://www.youtube.com/watch?v=0eV-tf-W2rQ and https://www.javaguides.net/2019/05/javascript-sessionstorage-methods.html
 
 // const chooseHorses = () => {
 // //     switch (horse) {
