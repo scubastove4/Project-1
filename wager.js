@@ -6,6 +6,7 @@ const chooseDiamond = document.querySelector('#choose-diamond')
 const oneDollar = document.querySelector('#one-dollar')
 const fiveDollars = document.querySelector('#five-dollars')
 const tenDollars = document.querySelector('#ten-dollars')
+const customWager = document.querySelector('#custom-wager')
 const enterCustomWager = document.querySelector('#for-custom-wager')
 let wager = null
 let spadeWager = null
@@ -30,53 +31,53 @@ const addTen = () => {
   wager += wagerAmounts.ten
 }
 
-const addCustom = (text) => {
-  wagerAmounts.custom = parseInt(text, 10)
-  wager += wagerAmounts.custom
-}
-
 const emptyWager = () => {
   wager = null
+  customWager.value = ''
   wagerAmounts.custom = null
 }
 
-const pickHorse = (e) => {
-  switch (e) {
-    case chooseSpade:
-      spadeWager = wager
-      emptyWager()
-      break
-    case chooseClub:
-      clubWager = wager
-      emptyWager()
-      break
-    case chooseHeart:
-      heartWager = wager
-      emptyWager()
-      break
-    case chooseDiamond:
-      diamondWager = wager
-      emptyWager()
-      break
-  }
-  console.log(
-    spadeWager,
-    clubWager,
-    heartWager,
-    diamondWager,
-    wager,
-    wagerAmounts.custom
-  )
-}
+// const pickHorse = (e) => {
+//   switch (e) {
+//     case chooseSpade:
+//       spadeWager = wager
+//       emptyWager()
+//       break
+//     case chooseClub:
+//       clubWager = wager
+//       emptyWager()
+//       break
+//     case chooseHeart:
+//       heartWager = wager
+//       emptyWager()
+//       break
+//     case chooseDiamond:
+//       diamondWager = wager
+//       emptyWager()
+//       break
+//   }
+//   console.log(
+//     spadeWager,
+//     clubWager,
+//     heartWager,
+//     diamondWager,
+//     wager,
+//     wagerAmounts.custom
+//   )
+// }
 //////////Fucntions above
 
 oneDollar.addEventListener('click', addOne)
 fiveDollars.addEventListener('click', addFive)
 tenDollars.addEventListener('click', addTen)
+enterCustomWager.addEventListener('click', () => {
+  wagerAmounts.custom = parseInt(customWager.value, 10)
+  wager += wagerAmounts.custom
+})
 
 chooseHorse.forEach((horse) => {
-  horse.addEventListener('click', (e) => {
-    switch (e) {
+  horse.addEventListener('click', () => {
+    switch (horse) {
       case chooseSpade:
         spadeWager = wager
         emptyWager()
