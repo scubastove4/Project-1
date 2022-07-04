@@ -88,6 +88,6 @@ const checkWinner = (horse) => {
 
 deck.addEventListener('click', raceHorses)
 
-raceAgain.addEventListener('load', () => {
+window.addEventListener('load', () => {
   raceAgain.style.display = 'none'
 })
