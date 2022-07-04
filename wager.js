@@ -1,31 +1,8 @@
 const chooseHorses = document.getElementsByClassName('choose-horse')
-// const horseArray = chooseHorses
-// const chooseSpade = document.querySelector('#choose-spade')
-// const chooseClub = document.querySelector('#choose-club')
-// const chooseHeart = document.querySelector('#choose-heart')
-// const chooseDiamond = document.querySelector('#choose-diamond')
 const horseButtons = document.querySelector('#horse-buttons')
-const oneDollar = document.querySelector('#one-dollar')
-const fiveDollars = document.querySelector('#five-dollars')
-const tenDollars = document.querySelector('#ten-dollars')
-const customWager = document.querySelector('#custom-wager')
-const enterCustomWager = document.querySelector('#for-custom-wager')
-const post = document.querySelector('#post')
-const test = document.querySelector('#test')
-let wager = null
-// let spadeWager = null
-// let clubWager = null
-// let heartWager = null
-// let diamondWager = null
-const wagerAmounts = {
-  one: 1,
-  five: 5,
-  ten: 10,
-  custom: null
-}
-
 const addHorse = document.querySelector('#add-horse')
 const forAddHorse = document.querySelector('#for-add-horse')
+const horses = {}
 class Horse {
   constructor(name) {
     this.name = name
@@ -37,11 +14,26 @@ class Horse {
     emptyWager()
   }
 }
+////// Horse above
 
-const horses = {}
-// const newHorses = [].slice.call(chooseHorses)
+const oneDollar = document.querySelector('#one-dollar')
+const fiveDollars = document.querySelector('#five-dollars')
+const tenDollars = document.querySelector('#ten-dollars')
+const customWager = document.querySelector('#custom-wager')
+const enterCustomWager = document.querySelector('#for-custom-wager')
+let wager = null
+const wagerAmounts = {
+  one: 1,
+  five: 5,
+  ten: 10,
+  custom: null
+}
+////// Wagers above
 
-///////////Globals above
+const post = document.querySelector('#post')
+////// Move to next page above
+
+///////////   Globals above //////////////
 
 const addHorses = () => {
   const newHorseButton = document.createElement('button')
@@ -72,7 +64,7 @@ const emptyWager = () => {
   wagerAmounts.custom = null
 }
 
-//////////Functions above
+///////////   Function above //////////////
 
 forAddHorse.addEventListener('click', addHorses)
 
@@ -105,33 +97,3 @@ post.addEventListener('click', () => {
 })
 
 // sessionStorage help https://www.youtube.com/watch?v=0eV-tf-W2rQ and https://www.javaguides.net/2019/05/javascript-sessionstorage-methods.html
-
-// const chooseHorses = () => {
-// //     switch (horse) {
-//       case chooseSpade:
-//         spadeWager += wager
-//         emptyWager()
-//         break
-//       case chooseClub:
-//         clubWager += wager
-//         emptyWager()
-//         break
-//       case chooseHeart:
-//         heartWager += wager
-//         emptyWager()
-//         break
-//       case chooseDiamond:
-//         diamondWager += wager
-//         emptyWager()
-//         break
-//     }
-//     console.log(
-//       spadeWager,
-//       clubWager,
-//       heartWager,
-//       diamondWager,
-//       wager,
-//       wagerAmounts.custom
-//     )
-//   })
-// })

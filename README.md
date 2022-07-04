@@ -56,15 +56,10 @@ On the next screen your horses will be assigned a lane based on the order they q
 | Real-time weather affecting background |
 | Run the Triple Crown                   |
 
-## <!-- checkbox wasn't working with - [ ] or - [x] inside table, so i added emojis. Help from https://stackoverflow.com/questions/47344571/how-to-draw-checkbox-or-tick-mark-in-github-markdown-table (linked below)-->
-
 ## **_Credits/Resources_**
 
-| Images                                                                                                                                                                            | Tecnhical                                                                                                                |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| [DuckDuckGo_Kentucky_Derby](hhttps://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.covers.com%2Fcms%2Fcovers%2Fba2c2dec-b1cd-4104-931c-337f4df39e09.jpg&f=1&nofb=1)     |
-| [DuckDuckGo_Donut](https://duckduckgo.com/?q=donut+cartoon&t=h_&atb=v331-1__&iar=images&iax=images&ia=images&iai=http%3A%2F%2Fcliparts.co%2Fcliparts%2FBcg%2Frqj%2FBcgrqjA7i.gif) | [Markdown_Cheatsheet](https://www.markdownguide.org/cheat-sheet/)                                                        |
-|                                                                                                                                                                                   | [Markdown_Guide](https://ia.net/writer/support/general/markdown-guide)                                                   |
-|                                                                                                                                                                                   | [Checkbox_Help](https://stackoverflow.com/questions/47344571/how-to-draw-checkbox-or-tick-mark-in-github-markdown-table) |
-
-<!-- Table idea from Markdown Cheatsheet -->
+| Images                                                                                                                                                                        | Tecnhical                                                                                          |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| [DuckDuckGo Kentucky Derby](hhttps://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.covers.com%2Fcms%2Fcovers%2Fba2c2dec-b1cd-4104-931c-337f4df39e09.jpg&f=1&nofb=1) | [Event Listener Delegation](https://youtu.be/XF1_MlZ5l6M?t=803)                                    |
+|                                                                                                                                                                               | [Session Storage Use 1](https://youtu.be/0eV-tf-W2rQ?t=320)                                        |
+|                                                                                                                                                                               | [Session Storage Use 2](https://www.javaguides.net/2019/05/javascript-sessionstorage-methods.html) |

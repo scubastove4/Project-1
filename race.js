@@ -5,7 +5,7 @@ const discard = document.querySelector('#discard')
 const cardChoices = Object.keys(horses)
 const raceAgain = document.querySelector('#raceAgain')
 
-///////////Globals above
+///////////   Globals above //////////////
 
 console.log(horses)
 console.log(cardChoices)
@@ -71,7 +71,7 @@ const moveHorse = () => {
   })
 }
 
-//////////Fucntions above
+///////////   Function above //////////////
 
 deck.addEventListener('click', moveHorse)
 
