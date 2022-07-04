@@ -1,16 +1,71 @@
 main {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 #spade,
 #club,
 #heart,
 #diamond {
   height: 100px;
-  width: 200px;
+  /* width: 100px; */
   border: 2px solid black;
   text-align: center;
   font-size: 50px;
+}
+#spade {
+  grid-row-start: 1;
+  grid-row-end: span 1;
+  align-self: stretch;
+}
+#club {
+  grid-row-start: 2;
+  grid-row-end: span 1;
+  align-self: stretch;
+}
+#heart {
+  grid-row-start: 3;
+  grid-row-end: span 1;
+  align-self: stretch;
+}
+#diamond {
+  grid-row-start: 4;
+  grid-row-end: span 1;
+  align-self: stretch;
+}
+.post {
+  grid-column-end: span 1;
+}
+.spot1 {
+  grid-column-start: 2;
+  grid-column-end: span 1;
+}
+.spot2 {
+  grid-column-start: 3;
+  grid-column-end: span 1;
+}
+.spot3 {
+  grid-column-start: 4;
+  grid-column-end: span 1;
+}
+.spot4 {
+  grid-column-start: 5;
+  grid-column-end: span 1;
+}
+.spot5 {
+  grid-column-start: 6;
+  grid-column-end: span 1;
+}
+.spot6 {
+  grid-column-start: 7;
+  grid-column-end: span 1;
+}
+.spot7 {
+  grid-column-start: 8;
+  grid-column-end: span 1;
+}
+.spot8 {
+  grid-column-start: 9;
+  grid-column-end: span 1;
 }
 
 footer {
@@ -27,8 +82,8 @@ footer {
   border: 2px solid black;
 }
 
-#return {
-  /* display: none; */
+#raceAgain {
+  display: ;
   height: 100px;
   width: 200px;
 }
