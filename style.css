@@ -1,0 +1,38 @@
+main {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+#spade,
+#club,
+#heart,
+#diamond {
+  height: 100px;
+  width: 200px;
+  border: 2px solid black;
+  text-align: center;
+  font-size: 50px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#card-deck,
+#discard {
+  height: 200px;
+  width: 100px;
+  border: 2px solid black;
+}
+
+#return {
+  /* display: none; */
+  height: 100px;
+  width: 200px;
+}
+
+a {
+  text-decoration: none;
+}
