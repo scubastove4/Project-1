@@ -12,8 +12,8 @@ const flipCounts = {
   heart: null,
   diamond: null
 }
-
 ///////////Globals above
+
 const chooseRandomCard = () => {
   const random = Math.ceil(Math.random() * cardChoices.length - 1)
   const card = cardChoices[random]
@@ -83,7 +83,6 @@ const checkWinner = (horse) => {
     raceAgain.style.display = 'initial'
   }
 }
-
 //////////Fucntions above
 
 deck.addEventListener('click', raceHorses)

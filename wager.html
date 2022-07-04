@@ -5,28 +5,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="wager.js"></script>
     <title>Kentucky Derby</title>
   </head>
   <body>
-    <div id="choose-horse">
-      <button>&#9824;</button>
-      <button>&#9827;</button>
-      <button>&#9829;</button>
-      <button>&#9830;</button>
-    </div>
-    <div id="choose-wager">
-      <button>+&#36;1</button>
-      <button>+&#36;5</button>
-      <button>+&#36;10</button>
+    <div class="choose-wager">
+      <button id="one-dollar">+&#36;1</button>
+      <button id="five-dollars">+&#36;5</button>
+      <button id="ten-dollars">+&#36;10</button>
       <input
         type="text"
         name="custom-wager"
-        id="custom-wager"
+        class="custom-wager"
         placeholder="Custom Wager"
       />
       <button id="for-custom-wager">Enter Custom Wager</button>
     </div>
-
+    <div>
+      <button class="choose-horse" id="choose-spade">&#9824;</button>
+      <button class="choose-horse" id="choose-club">&#9827;</button>
+      <button class="choose-horse" id="choose-heart">&#9829;</button>
+      <button class="choose-horse" id="choose-diamond">&#9830;</button>
+    </div>
+    <!-- <form>
+      <input type="button" class="one-dollar" value="+&#36;1" />
+      <input type="button" class="five-dollars" value="+&#36;5" />
+      <input type="button" class="ten-dollars" value="+&#36;10" />
+      <input
+        type="text"
+        name="custom-wager"
+        class="custom-wager"
+        placeholder="Custom Wager"
+      />
+      <button class="for-custom-wager">Enter Custom Wager</button>
+      <input
+        type="submit"
+        name="submit"
+        id="submit-spade"
+        value="Submit Spade Wager"
+      />
+    </form>
+    <form>
+      <input type="button" class="one-dollar" value="+&#36;1" />
+      <input type="button" class="five-dollars" value="+&#36;5" />
+      <input type="button" class="ten-dollars" value="+&#36;10" />
+      <input
+        type="text"
+        name="custom-wager"
+        class="custom-wager"
+        placeholder="Custom Wager"
+      />
+      <button class="for-custom-wager">Enter Custom Wager</button>
+      <input
+        type="submit"
+        name="submit"
+        id="submit-club"
+        value="Submit Club Wager"
+      />
+    </form>
+    <form>
+      <input type="button" class="one-dollar" value="+&#36;1" />
+      <input type="button" class="five-dollars" value="+&#36;5" />
+      <input type="button" class="ten-dollars" value="+&#36;10" />
+      <input
+        type="text"
+        name="custom-wager"
+        class="custom-wager"
+        placeholder="Custom Wager"
+      />
+      <button class="for-custom-wager">Enter Custom Wager</button>
+      <input
+        type="submit"
+        name="submit"
+        id="submit-heart"
+        value="Submit Heart Wager"
+      />
+    </form>
+    <form>
+      <input type="button" class="one-dollar" value="+&#36;1" />
+      <input type="button" class="five-dollars" value="+&#36;5" />
+      <input type="button" class="ten-dollars" value="+&#36;10" />
+      <input
+        type="text"
+        name="custom-wager"
+        class="custom-wager"
+        placeholder="Custom Wager"
+      />
+      <button class="for-custom-wager">Enter Custom Wager</button>
+      <input
+        type="submit"
+        name="submit"
+        id="submit-diamond"
+        value="Submit Diamond Wager"
+      />
+    </form> -->
     <button id="post"><a href="race.html">Riders to Their Posts</a></button>
   </body>
 </html>
