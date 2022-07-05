@@ -35,6 +35,16 @@ const post = document.querySelector('#post')
 
 ///////////   Globals above //////////////
 
+const horseMinumum = () => {
+  if (Object.keys(horses).length < 2) {
+    post.style.display = 'none'
+  } else {
+    post.style.display = 'initial'
+  }
+}
+
+horseMinumum()
+
 const addHorses = () => {
   const newHorseButton = document.createElement('button')
   horseButtons.appendChild(newHorseButton)
@@ -46,6 +56,7 @@ const addHorses = () => {
   if (Object.keys(horses).length === 8) {
     forAddHorse.removeEventListener('click', addHorses)
   }
+  horseMinumum()
 }
 
 const addOne = () => {
