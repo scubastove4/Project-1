@@ -1,15 +1,14 @@
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(18, 1fr);
 }
 
 .size,
 .go-back {
-  height: 100px;
-  /* width: 100px; */
+  height: 50px;
   border: 2px solid black;
   text-align: center;
-  font-size: 50px;
+  font-size: 12px;
   align-self: stretch;
 }
 
@@ -120,14 +119,63 @@ main {
   grid-column-end: span 1;
 }
 
-.spot8 {
+.spot8,
+#gb8 {
   grid-column-start: 10;
+  grid-column-end: span 1;
+}
+
+.spot9,
+#gb9 {
+  grid-column-start: 11;
+  grid-column-end: span 1;
+}
+
+.spot10,
+#gb10 {
+  grid-column-start: 12;
+  grid-column-end: span 1;
+}
+
+.spot11,
+#gb11 {
+  grid-column-start: 13;
+  grid-column-end: span 1;
+}
+
+.spot12,
+#gb12 {
+  grid-column-start: 14;
+  grid-column-end: span 1;
+}
+
+.spot13,
+#gb13 {
+  grid-column-start: 15;
+  grid-column-end: span 1;
+}
+
+.spot14,
+#gb14 {
+  grid-column-start: 16;
+  grid-column-end: span 1;
+}
+
+.spot15,
+#gb15 {
+  grid-column-start: 17;
+  grid-column-end: span 1;
+}
+
+.spot16 {
+  grid-column-start: 18;
   grid-column-end: span 1;
 }
 
 .go-back {
   grid-row-end: span 1;
   order: 9;
+  margin-top: 10px;
 }
 
 footer {
@@ -139,9 +187,10 @@ footer {
 
 #card-deck,
 #discard {
-  height: 200px;
+  height: 150px;
   width: 100px;
   border: 2px solid black;
+  margin-top: 10px;
 }
 
 #race-again {

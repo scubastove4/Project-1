@@ -68,6 +68,7 @@ const renderRandomGoBackHorse = () => {
       goBackText.innerText = horses[`${randomGoBackHorse}`].name
       ++goBackCount
       allFlipCounts = []
+      console, console.log(goBackCount)
     }
   })
 }
@@ -158,11 +159,107 @@ const goBackSpot = () => {
       } else {
         flipCount = []
       }
+      break
+    case 8:
+      Object.keys(horses).forEach((horse) => {
+        if (horses[`${horse}`].flipCount >= 8) {
+          allFlipCounts.push(horse)
+        }
+      })
+      if (allFlipCounts.length === Object.keys(horses).length) {
+        renderRandomGoBackHorse()
+      } else {
+        flipCount = []
+      }
+      break
+    case 9:
+      Object.keys(horses).forEach((horse) => {
+        if (horses[`${horse}`].flipCount >= 9) {
+          allFlipCounts.push(horse)
+        }
+      })
+      if (allFlipCounts.length === Object.keys(horses).length) {
+        renderRandomGoBackHorse()
+      } else {
+        flipCount = []
+      }
+      break
+    case 10:
+      Object.keys(horses).forEach((horse) => {
+        if (horses[`${horse}`].flipCount >= 10) {
+          allFlipCounts.push(horse)
+        }
+      })
+      if (allFlipCounts.length === Object.keys(horses).length) {
+        renderRandomGoBackHorse()
+      } else {
+        flipCount = []
+      }
+      break
+    case 11:
+      Object.keys(horses).forEach((horse) => {
+        if (horses[`${horse}`].flipCount >= 11) {
+          allFlipCounts.push(horse)
+        }
+      })
+      if (allFlipCounts.length === Object.keys(horses).length) {
+        renderRandomGoBackHorse()
+      } else {
+        flipCount = []
+      }
+      break
+    case 12:
+      Object.keys(horses).forEach((horse) => {
+        if (horses[`${horse}`].flipCount >= 12) {
+          allFlipCounts.push(horse)
+        }
+      })
+      if (allFlipCounts.length === Object.keys(horses).length) {
+        renderRandomGoBackHorse()
+      } else {
+        flipCount = []
+      }
+      break
+    case 13:
+      Object.keys(horses).forEach((horse) => {
+        if (horses[`${horse}`].flipCount >= 13) {
+          allFlipCounts.push(horse)
+        }
+      })
+      if (allFlipCounts.length === Object.keys(horses).length) {
+        renderRandomGoBackHorse()
+      } else {
+        flipCount = []
+      }
+      break
+    case 14:
+      Object.keys(horses).forEach((horse) => {
+        if (horses[`${horse}`].flipCount >= 14) {
+          allFlipCounts.push(horse)
+        }
+      })
+      if (allFlipCounts.length === Object.keys(horses).length) {
+        renderRandomGoBackHorse()
+      } else {
+        flipCount = []
+      }
+      break
+    case 15:
+      Object.keys(horses).forEach((horse) => {
+        if (horses[`${horse}`].flipCount >= 15) {
+          allFlipCounts.push(horse)
+        }
+      })
+      if (allFlipCounts.length === Object.keys(horses).length) {
+        renderRandomGoBackHorse()
+      } else {
+        flipCount = []
+      }
   }
 }
 
 const checkWinner = (horse) => {
-  if (horses[`${horse}`].flipCount === 8) {
+  if (horses[`${horse}`].flipCount === 16) {
     deck.removeEventListener('click', moveHorse)
     let winnerPayout = payout(horse)
     wagerDisplay.innerText =
