@@ -8,10 +8,15 @@ class Horse {
     this.name = name
     this.flipCount = null
     this.wagerAmount = null
+    this.tcWagerAmount = null
   }
   addWager() {
     this.wagerAmount += wager
     emptyWager()
+  }
+  tcAddWager() {
+    this.tcWagerAmount += tcWager
+    tcEmptyWager()
   }
 }
 ////// Horse above
@@ -23,6 +28,19 @@ const customWager = document.querySelector('#custom-wager')
 const enterCustomWager = document.querySelector('#for-custom-wager')
 let wager = null
 const wagerAmounts = {
+  one: 1,
+  five: 5,
+  ten: 10,
+  custom: null
+}
+
+const tcOneDollar = document.querySelector('#tc-one-dollar')
+const tcFiveDollars = document.querySelector('#tc-five-dollars')
+const tcTenDollars = document.querySelector('#tc-ten-dollars')
+const tcCustomWager = document.querySelector('#tc-custom-wager')
+const tcEnterCustomWager = document.querySelector('#tc-for-custom-wager')
+let tcWager = null
+const tcWagerAmounts = {
   one: 1,
   five: 5,
   ten: 10,
@@ -62,9 +80,11 @@ const addHorses = () => {
 const addOne = () => {
   wager += wagerAmounts.one
 }
+
 const addFive = () => {
   wager += wagerAmounts.five
 }
+
 const addTen = () => {
   wager += wagerAmounts.ten
 }
@@ -73,6 +93,24 @@ const emptyWager = () => {
   wager = null
   customWager.value = ''
   wagerAmounts.custom = null
+}
+
+const tcAddOne = () => {
+  tcWager += tcWagerAmounts.one
+}
+
+const tcAddFive = () => {
+  tcWager += tcWagerAmounts.five
+}
+
+const tcAddTen = () => {
+  tcWager += tcWagerAmounts.ten
+}
+
+const tcEmptyWager = () => {
+  tcWager = null
+  tcCustomWager.value = ''
+  tcWagerAmounts.custom = null
 }
 
 ///////////   Function above //////////////
@@ -94,13 +132,31 @@ enterCustomWager.addEventListener('click', () => {
   customWager.value = ''
 })
 
+tcOneDollar.addEventListener('click', tcAddOne)
+tcFiveDollars.addEventListener('click', tcAddFive)
+tcTenDollars.addEventListener('click', tcAddTen)
+tcEnterCustomWager.addEventListener('click', () => {
+  if (isNaN(tcCustomWager.value)) {
+    alert('Please enter a number')
+  } else if (tcCustomWager.value < 0) {
+    alert('Please enter a positive number')
+  } else {
+    tcWagerAmounts.custom = parseInt(tcCustomWager.value, 10)
+    tcWager += tcWagerAmounts.custom
+  }
+  tcCustomWager.value = ''
+})
+
 document.addEventListener('click', (e) => {
   if (e.target.matches('.choose-horse')) {
     horses[`${e.target.id}`].addWager()
+    horses[`${e.target.id}`].tcAddWager()
     e.target.innerText =
       horses[`${e.target.id}`].name.toUpperCase() +
       ' $' +
-      horses[`${e.target.id}`].wagerAmount
+      horses[`${e.target.id}`].wagerAmount +
+      ' / $' +
+      horses[`${e.target.id}`].tcWagerAmount
   }
 })
 
