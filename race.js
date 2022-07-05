@@ -5,6 +5,7 @@ const discard = document.querySelector('#discard')
 const cardChoices = Object.keys(horses)
 const wagerDisplay = document.querySelector('#wager-pool')
 const goBacks = document.querySelectorAll('.go-back')
+let goBackCount = 1
 const raceAgain = document.querySelector('#race-again')
 
 ///////////   Globals above //////////////
@@ -38,7 +39,7 @@ const poolWagers = () => {
   return parseInt(allWagers, 10)
 }
 
-const chooseRandomCard = () => {
+const renderRandomHorse = () => {
   const random = Math.ceil(Math.random() * Object.keys(horses).length - 1)
   const card = cardChoices[random]
   return card
@@ -48,6 +49,81 @@ const payout = (winningHorse) => {
   let pool = poolWagers()
   let winnersWager = parseInt(horses[`${winningHorse}`].wagerAmount, 10)
   return pool - winnersWager
+}
+
+const goBackSpot = () => {
+  let allFlipCounts = []
+  switch (goBackCount) {
+    case 1:
+      Object.keys(horses).forEach((horse) => {
+        if (horses[`${horse}`].flipCount >= 1) {
+          allFlipCounts.push(horse)
+        }
+      })
+      if (allFlipCounts.length === Object.keys(horses).length) {
+        console.log(allFlipCounts)
+      }
+      break
+    case 2:
+      Object.keys(horses).forEach((horse) => {
+        if (horses[`${horse}`].flipCount >= 2) {
+          allFlipCounts.push(horse)
+        }
+      })
+      if (allFlipCounts.length === Object.keys(horses).length) {
+        console.log(allFlipCounts)
+      }
+      break
+    case 3:
+      Object.keys(horses).forEach((horse) => {
+        if (horses[`${horse}`].flipCount >= 3) {
+          allFlipCounts.push(horse)
+        }
+      })
+      if (allFlipCounts.length === Object.keys(horses).length) {
+        console.log(allFlipCounts)
+      }
+      break
+    case 4:
+      Object.keys(horses).forEach((horse) => {
+        if (horses[`${horse}`].flipCount >= 4) {
+          allFlipCounts.push(horse)
+        }
+      })
+      if (allFlipCounts.length === Object.keys(horses).length) {
+        console.log(allFlipCounts)
+      }
+      break
+    case 5:
+      Object.keys(horses).forEach((horse) => {
+        if (horses[`${horse}`].flipCount >= 5) {
+          allFlipCounts.push(horse)
+        }
+      })
+      if (allFlipCounts.length === Object.keys(horses).length) {
+        console.log(allFlipCounts)
+      }
+      break
+    case 6:
+      Object.keys(horses).forEach((horse) => {
+        if (horses[`${horse}`].flipCount >= 6) {
+          allFlipCounts.push(horse)
+        }
+      })
+      if (allFlipCounts.length === Object.keys(horses).length) {
+        console.log(allFlipCounts)
+      }
+      break
+    case 7:
+      Object.keys(horses).forEach((horse) => {
+        if (horses[`${horse}`].flipCount >= 7) {
+          allFlipCounts.push(horse)
+        }
+      })
+      if (allFlipCounts.length === Object.keys(horses).length) {
+        console.log(allFlipCounts)
+      }
+  }
 }
 
 const checkWinner = (horse) => {
@@ -62,7 +138,8 @@ const checkWinner = (horse) => {
 }
 
 const moveHorse = () => {
-  let randomHorse = chooseRandomCard()
+  // chooseRandomCard()
+  let randomHorse = renderRandomHorse()
   Object.keys(horses).forEach((horse, index) => {
     if (horse === randomHorse) {
       ++horses[`${randomHorse}`].flipCount
@@ -74,6 +151,7 @@ const moveHorse = () => {
       addClass.classList.add('spot' + horses[`${randomHorse}`].flipCount)
       discard.innerText = horses[`${randomHorse}`].name
     }
+    goBackSpot()
     checkWinner(randomHorse)
   })
 }

@@ -4,7 +4,7 @@
 
 ### By: Steve Morello
 
-[GitHub](https://github.com/scubastove4) | [LinkedIn](https://www.linkedin.com/in/stephen-morello-15286b22/) | [Twitter](https://twitter.com/scubastove4) | [Trello](https://trello.com/b/3arBzRBG/kentucky-derby-7-8-22)
+[GitHub](https://github.com/scubastove4) | [LinkedIn](https://www.linkedin.com/in/stephen-morello/) | [Twitter](https://twitter.com/scubastove4) | [Trello](https://trello.com/b/3arBzRBG/kentucky-derby-7-8-22)
 
 ---
 
