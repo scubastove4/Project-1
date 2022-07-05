@@ -3,7 +3,8 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-.size {
+.size,
+.go-back {
   height: 100px;
   /* width: 100px; */
   border: 2px solid black;
@@ -77,37 +78,44 @@ main {
   grid-column-end: span 1;
 }
 
-.spot1 {
+.spot1,
+#gb1 {
   grid-column-start: 3;
   grid-column-end: span 1;
 }
 
-.spot2 {
+.spot2,
+#gb2 {
   grid-column-start: 4;
   grid-column-end: span 1;
 }
 
-.spot3 {
+.spot3,
+#gb3 {
   grid-column-start: 5;
   grid-column-end: span 1;
 }
 
-.spot4 {
+.spot4,
+#gb4 {
   grid-column-start: 6;
   grid-column-end: span 1;
 }
 
-.spot5 {
+.spot5,
+#gb5 {
   grid-column-start: 7;
   grid-column-end: span 1;
 }
 
-.spot6 {
+.spot6,
+#gb6 {
   grid-column-start: 8;
   grid-column-end: span 1;
 }
 
-.spot7 {
+.spot7,
+#gb7 {
   grid-column-start: 9;
   grid-column-end: span 1;
 }
@@ -115,6 +123,11 @@ main {
 .spot8 {
   grid-column-start: 10;
   grid-column-end: span 1;
+}
+
+.go-back {
+  grid-row-end: span 1;
+  order: 9;
 }
 
 footer {

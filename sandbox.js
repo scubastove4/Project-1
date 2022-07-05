@@ -1,22 +1,30 @@
-const addHorse = document.querySelector('#add-horse')
-const forAddHorse = document.querySelector('#for-add-horse')
-class Horse {
-  constructor(name) {
-    this.name = name
-    this.flipCount = null
-    this.wagerAmount = null
-  }
+const checkSpot1 = (horse) => {
+  return horses[`${horse}`].flipcount >= 1
 }
 
-let horses = []
-
-forAddHorse.addEventListener('click', () => {
-  const horse = new Horse(`${addHorse.value}`)
-  horses.push(horse)
-  const newHorseButton = document.createElement('button')
-  const body = document.querySelector('body')
-  body.appendChild(newHorseButton)
-  newHorseButton.classList.add('choose-horse')
-  newHorseButton.innerText = addHorse.value.toUpperCase()
-  console.log(horses)
-})
+const goBackSpot = () => {
+  if (Object.keys(horses).every(checkSpot1) === true) {
+    let randomGoBackHorse = chooseRandomCard()
+    Object.keys(horses).forEach((horse, index) => {
+      if (horse === randomGoBackHorse) {
+        --horses[`${randomGoBackHorse}`].flipCount
+        let addClass = document.getElementById(`${randomGoBackHorse}`)
+        if (addClass.classList === 'spot1') {
+          addClass.classList.remove(
+            'spot' + (horses[`${randomGoBackHorse}`].flipCount + 1)
+          )
+          addClass.classList.add('post')
+        } else {
+          addClass.classList.remove(
+            'spot' + (horses[`${randomGoBackHorse}`].flipCount + 1)
+          )
+          addClass.classList.add(
+            'spot' + horses[`${randomGoBackHorse}`].flipCount
+          )
+        }
+        let goBack = getElementById('gb' + 1)
+        goBack.innerText = horses[`${randomGoBackHorse}`].name
+      }
+    })
+  }
+}

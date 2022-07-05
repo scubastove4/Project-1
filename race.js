@@ -4,12 +4,10 @@ const deck = document.querySelector('#card-deck')
 const discard = document.querySelector('#discard')
 const cardChoices = Object.keys(horses)
 const wagerDisplay = document.querySelector('#wager-pool')
+const goBacks = document.querySelectorAll('.go-back')
 const raceAgain = document.querySelector('#race-again')
 
 ///////////   Globals above //////////////
-
-console.log(horses)
-console.log(cardChoices)
 
 const createHorse = () => {
   Object.keys(horses).forEach((horse, index) => {
@@ -28,12 +26,6 @@ const createHorse = () => {
   sessionStorage.clear()
 }
 
-const chooseRandomCard = () => {
-  const random = Math.ceil(Math.random() * Object.keys(horses).length - 1)
-  const card = cardChoices[random]
-  return card
-}
-
 const poolWagers = () => {
   let allWagers = Object.keys(horses)
     .map((horse) => {
@@ -42,10 +34,14 @@ const poolWagers = () => {
     .reduce((accumulator, value) => {
       return accumulator + value
     }, 0)
-  // console.log(parseInt(allWagers, 10))
-
   wagerDisplay.innerText = `Up for Grabs: $${parseInt(allWagers, 10)}`
   return parseInt(allWagers, 10)
+}
+
+const chooseRandomCard = () => {
+  const random = Math.ceil(Math.random() * Object.keys(horses).length - 1)
+  const card = cardChoices[random]
+  return card
 }
 
 const payout = (winningHorse) => {
@@ -57,7 +53,6 @@ const payout = (winningHorse) => {
 const checkWinner = (horse) => {
   if (horses[`${horse}`].flipCount === 8) {
     deck.removeEventListener('click', moveHorse)
-    console.log(horses[`${horse}`].name + ' wins!')
     let winnerPayout = payout(horse)
     wagerDisplay.innerText =
       horses[`${horse}`].name.toUpperCase() +
@@ -78,7 +73,6 @@ const moveHorse = () => {
       )
       addClass.classList.add('spot' + horses[`${randomHorse}`].flipCount)
       discard.innerText = horses[`${randomHorse}`].name
-      // console.log(horses[`${randomHorse}`])
     }
     checkWinner(randomHorse)
   })
@@ -92,5 +86,8 @@ window.addEventListener('load', () => {
   createHorse()
   poolWagers()
   raceAgain.style.display = 'none'
-  track.style.gridTemplateRows = `repeat(${Object.keys(horses).length}, 1fr`
+  track.style.gridTemplateRows = `repeat(${Object.keys(horses).length + 1}, 1fr`
+  goBacks.forEach((goBack) => {
+    goBack.style.gridRowStart = `${Object.keys(horses).length + 1}`
+  })
 })
