@@ -1,54 +1,20 @@
-const checkSpot1 = (horse) => {
-  return horses[`${horse}`].flipcount >= 1
-}
-
-const checkSpot2 = (horse) => {
-  return horses[`${horse}`].flipcount >= 2
-}
-
-const checkSpot3 = (horse) => {
-  return horses[`${horse}`].flipcount >= 3
-}
-
-const checkSpot4 = (horse) => {
-  return horses[`${horse}`].flipcount >= 4
-}
-
-const checkSpot5 = (horse) => {
-  return horses[`${horse}`].flipcount >= 5
-}
-
-const checkSpot6 = (horse) => {
-  return horses[`${horse}`].flipcount >= 6
-}
-
-const checkSpot7 = (horse) => {
-  return horses[`${horse}`].flipcount >= 7
-}
-
 const renderRandomGoBackHorse = () => {
-  chooseRandomCard()
-  let randomGoBackHorse = chooseRandomCard()
+  // chooseRandomCard()
+  let randomGoBackHorse = renderRandomHorse()
   Object.keys(horses).forEach((horse, index) => {
     if (horse === randomGoBackHorse) {
       let goBackClass = document.getElementById(`${randomGoBackHorse}`)
-      if (goBackClass.classList === 'spot1') {
-        goBackClass.classList.remove(
-          'spot' + horses[`${randomGoBackHorse}`].flipCount
-        )
-        goBackClass.classList.add('post')
-      } else {
-        goBackClass.classList.remove(
-          'spot' + horses[`${randomGoBackHorse}`].flipCount
-        )
-        goBackClass.classList.add(
-          'spot' + (horses[`${randomGoBackHorse}`].flipCount - 1)
-        )
-      }
+      goBackClass.classList.remove(
+        'spot' + horses[`${randomGoBackHorse}`].flipCount
+      )
+      goBackClass.classList.add(
+        'spot' + (horses[`${randomGoBackHorse}`].flipCount - 1)
+      )
       --horses[`${randomGoBackHorse}`].flipCount
-      let goBackText = getElementById(`gb${goBack}`)
+      let goBackText = getElementById(`gb${goBackCount}`)
       goBackText.innerText = horses[`${randomGoBackHorse}`].name
-      ++goBack
+      ++goBackCount
+      allFlipCounts = []
     }
   })
 }

@@ -51,6 +51,27 @@ const payout = (winningHorse) => {
   return pool - winnersWager
 }
 
+const renderRandomGoBackHorse = () => {
+  // chooseRandomCard()
+  let randomGoBackHorse = renderRandomHorse()
+  Object.keys(horses).forEach((horse, index) => {
+    if (horse === randomGoBackHorse) {
+      let goBackClass = document.getElementById(`${randomGoBackHorse}`)
+      goBackClass.classList.remove(
+        'spot' + horses[`${randomGoBackHorse}`].flipCount
+      )
+      goBackClass.classList.add(
+        'spot' + (horses[`${randomGoBackHorse}`].flipCount - 1)
+      )
+      --horses[`${randomGoBackHorse}`].flipCount
+      let goBackText = document.getElementById(`gb${goBackCount}`)
+      goBackText.innerText = horses[`${randomGoBackHorse}`].name
+      ++goBackCount
+      allFlipCounts = []
+    }
+  })
+}
+
 const goBackSpot = () => {
   let allFlipCounts = []
   switch (goBackCount) {
@@ -61,7 +82,9 @@ const goBackSpot = () => {
         }
       })
       if (allFlipCounts.length === Object.keys(horses).length) {
-        console.log(allFlipCounts)
+        renderRandomGoBackHorse()
+      } else {
+        flipCount = []
       }
       break
     case 2:
@@ -71,7 +94,9 @@ const goBackSpot = () => {
         }
       })
       if (allFlipCounts.length === Object.keys(horses).length) {
-        console.log(allFlipCounts)
+        renderRandomGoBackHorse()
+      } else {
+        flipCount = []
       }
       break
     case 3:
@@ -81,7 +106,9 @@ const goBackSpot = () => {
         }
       })
       if (allFlipCounts.length === Object.keys(horses).length) {
-        console.log(allFlipCounts)
+        renderRandomGoBackHorse()
+      } else {
+        flipCount = []
       }
       break
     case 4:
@@ -91,7 +118,9 @@ const goBackSpot = () => {
         }
       })
       if (allFlipCounts.length === Object.keys(horses).length) {
-        console.log(allFlipCounts)
+        renderRandomGoBackHorse()
+      } else {
+        flipCount = []
       }
       break
     case 5:
@@ -101,7 +130,9 @@ const goBackSpot = () => {
         }
       })
       if (allFlipCounts.length === Object.keys(horses).length) {
-        console.log(allFlipCounts)
+        renderRandomGoBackHorse()
+      } else {
+        flipCount = []
       }
       break
     case 6:
@@ -111,7 +142,9 @@ const goBackSpot = () => {
         }
       })
       if (allFlipCounts.length === Object.keys(horses).length) {
-        console.log(allFlipCounts)
+        renderRandomGoBackHorse()
+      } else {
+        flipCount = []
       }
       break
     case 7:
@@ -121,7 +154,9 @@ const goBackSpot = () => {
         }
       })
       if (allFlipCounts.length === Object.keys(horses).length) {
-        console.log(allFlipCounts)
+        renderRandomGoBackHorse()
+      } else {
+        flipCount = []
       }
   }
 }
@@ -138,14 +173,12 @@ const checkWinner = (horse) => {
 }
 
 const moveHorse = () => {
-  // chooseRandomCard()
   let randomHorse = renderRandomHorse()
   Object.keys(horses).forEach((horse, index) => {
     if (horse === randomHorse) {
       ++horses[`${randomHorse}`].flipCount
       let addClass = document.getElementById(`${randomHorse}`)
       addClass.classList.remove(
-        'post',
         'spot' + (horses[`${randomHorse}`].flipCount - 1)
       )
       addClass.classList.add('spot' + horses[`${randomHorse}`].flipCount)
