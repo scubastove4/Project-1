@@ -86,7 +86,10 @@ enterCustomWager.addEventListener('click', () => {
 document.addEventListener('click', (e) => {
   if (e.target.matches('.choose-horse')) {
     horses[`${e.target.id}`].addWager()
-    console.log(horses[`${e.target.id}`].wagerAmount)
+    e.target.innerText =
+      horses[`${e.target.id}`].name.toUpperCase() +
+      ' $' +
+      horses[`${e.target.id}`].wagerAmount
   }
 })
 

@@ -3,7 +3,8 @@ const track = document.querySelector('main')
 const deck = document.querySelector('#card-deck')
 const discard = document.querySelector('#discard')
 const cardChoices = Object.keys(horses)
-const raceAgain = document.querySelector('#raceAgain')
+const wagerDisplay = document.querySelector('#wager-pool')
+const raceAgain = document.querySelector('#race-again')
 
 ///////////   Globals above //////////////
 
@@ -12,11 +13,17 @@ console.log(cardChoices)
 
 const createHorse = () => {
   Object.keys(horses).forEach((horse, index) => {
-    const newDiv = document.createElement('div')
-    track.appendChild(newDiv)
-    newDiv.classList.add('post')
-    newDiv.classList.add('size')
-    newDiv.id = `horse${index}`
+    const newDivWager = document.createElement('div')
+    track.appendChild(newDivWager)
+    newDivWager.classList.add(`horse${index}`)
+    newDivWager.classList.add('size')
+    newDivWager.innerText =
+      horses[`${horse}`].name + ': ' + horses[`${horse}`].wagerAmount
+    const newDivHorse = document.createElement('div')
+    track.appendChild(newDivHorse)
+    newDivHorse.classList.add('post')
+    newDivHorse.classList.add('size')
+    newDivHorse.id = `horse${index}`
   })
   sessionStorage.clear()
 }
@@ -36,20 +43,25 @@ const poolWagers = () => {
       return accumulator + value
     }, 0)
   // console.log(parseInt(allWagers, 10))
+
+  wagerDisplay.innerText = `Up for Grabs: $${parseInt(allWagers, 10)}`
   return parseInt(allWagers, 10)
 }
 
 const payout = (winningHorse) => {
   let pool = poolWagers()
   let winnersWager = parseInt(horses[`${winningHorse}`].wagerAmount, 10)
-  console.log(pool - winnersWager)
+  return pool - winnersWager
 }
 
 const checkWinner = (horse) => {
   if (horses[`${horse}`].flipCount === 8) {
     deck.removeEventListener('click', moveHorse)
     console.log(horses[`${horse}`].name + ' wins!')
-    payout(horse)
+    let winnerPayout = payout(horse)
+    wagerDisplay.innerText =
+      horses[`${horse}`].name.toUpperCase() +
+      ` wins! Backers collect $${winnerPayout}!`
     raceAgain.style.display = 'initial'
   }
 }
@@ -65,6 +77,7 @@ const moveHorse = () => {
         'spot' + (horses[`${randomHorse}`].flipCount - 1)
       )
       addClass.classList.add('spot' + horses[`${randomHorse}`].flipCount)
+      discard.innerText = horses[`${randomHorse}`].name
       // console.log(horses[`${randomHorse}`])
     }
     checkWinner(randomHorse)

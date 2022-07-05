@@ -1,6 +1,6 @@
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .size {
@@ -9,97 +9,111 @@ main {
   border: 2px solid black;
   text-align: center;
   font-size: 50px;
-}
-
-#horse0 {
-  grid-row-start: 1;
-  grid-row-end: span 1;
   align-self: stretch;
 }
 
-#horse1 {
-  grid-row-start: 2;
-  grid-row-end: span 1;
-  align-self: stretch;
-}
-
-#horse2 {
-  grid-row-start: 3;
-  grid-row-end: span 1;
-  align-self: stretch;
-}
-
-#horse3 {
-  grid-row-start: 4;
-  grid-row-end: span 1;
-  align-self: stretch;
-}
-
-#horse4 {
-  grid-row-start: 5;
-  grid-row-end: span 1;
-  align-self: stretch;
-}
-
-#horse5 {
-  grid-row-start: 6;
-  grid-row-end: span 1;
-  align-self: stretch;
-}
-
-#horse6 {
-  grid-row-start: 7;
-  grid-row-end: span 1;
-  align-self: stretch;
-}
-
-#horse7 {
-  grid-row-start: 8;
-  grid-row-end: span 1;
-  align-self: stretch;
-}
-
-.post {
+.horse0,
+.horse1,
+.horse2,
+.horse3,
+.horse4,
+.horse5,
+.horse6,
+.horse7 {
+  grid-column-start: 1;
   grid-column-end: span 1;
 }
 
-.spot1 {
+#horse0,
+.horse0 {
+  grid-row-start: 1;
+  grid-row-end: span 1;
+}
+
+#horse1,
+.horse1 {
+  grid-row-start: 2;
+  grid-row-end: span 1;
+}
+
+#horse2,
+.horse2 {
+  grid-row-start: 3;
+  grid-row-end: span 1;
+}
+
+#horse3,
+.horse3 {
+  grid-row-start: 4;
+  grid-row-end: span 1;
+}
+
+#horse4,
+.horse4 {
+  grid-row-start: 5;
+  grid-row-end: span 1;
+}
+
+#horse5,
+.horse5 {
+  grid-row-start: 6;
+  grid-row-end: span 1;
+}
+
+#horse6,
+.horse6 {
+  grid-row-start: 7;
+  grid-row-end: span 1;
+}
+
+#horse7,
+.horse7 {
+  grid-row-start: 8;
+  grid-row-end: span 1;
+}
+
+.post {
   grid-column-start: 2;
   grid-column-end: span 1;
 }
 
-.spot2 {
+.spot1 {
   grid-column-start: 3;
   grid-column-end: span 1;
 }
 
-.spot3 {
+.spot2 {
   grid-column-start: 4;
   grid-column-end: span 1;
 }
 
-.spot4 {
+.spot3 {
   grid-column-start: 5;
   grid-column-end: span 1;
 }
 
-.spot5 {
+.spot4 {
   grid-column-start: 6;
   grid-column-end: span 1;
 }
 
-.spot6 {
+.spot5 {
   grid-column-start: 7;
   grid-column-end: span 1;
 }
 
-.spot7 {
+.spot6 {
   grid-column-start: 8;
   grid-column-end: span 1;
 }
 
-.spot8 {
+.spot7 {
   grid-column-start: 9;
+  grid-column-end: span 1;
+}
+
+.spot8 {
+  grid-column-start: 10;
   grid-column-end: span 1;
 }
 
@@ -117,7 +131,7 @@ footer {
   border: 2px solid black;
 }
 
-#raceAgain {
+#race-again {
   display: ;
   height: 100px;
   width: 200px;
