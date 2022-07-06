@@ -13,6 +13,8 @@
   box-sizing: border-box;
 }
 
+/* Above is global styling */
+
 #index {
   display: flex;
   flex-direction: column;
@@ -35,6 +37,8 @@ h1 {
   letter-spacing: 2px;
   -webkit-text-stroke-color: #4a4653;
   -webkit-text-stroke-width: 2px;
+
+  /* Help with text outline https://www.codesdope.com/blog/article/adding-outline-to-text-using-css/ */
 }
 
 #index-buttons {
@@ -75,6 +79,89 @@ h1 {
 .index-buttons {
   width: max-content;
 }
+
+/* Above is index.html styling */
+
+#sr-wager-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.playtenn.com%2Fwp-content%2Fuploads%2F2019%2F07%2Ftn-sports-betting-kiosks.jpg&f=1&nofb=1);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+#sr-wager-h1 {
+  font-size: 5rem;
+  color: #4a4653;
+  margin-bottom: 3%;
+  -webkit-text-stroke-color: #f8f9ef;
+  -webkit-text-stroke-width: 2px;
+}
+
+.add-horse,
+.choose-wager {
+  display: flex;
+  justify-content: center;
+  height: 7%;
+  width: 100%;
+}
+
+input,
+#for-add-horses,
+#for-custom-wager {
+  height: 100%;
+}
+
+#for-add-horse,
+#for-custom-wager,
+.choose-horse {
+  font-size: 1rem;
+  width: max-content;
+  padding: 5px;
+}
+
+#one-dollar,
+#five-dollars,
+#ten-dollars {
+  width: 4%;
+  margin: 0 5px;
+}
+
+.choose-horse {
+  margin: 0 10px;
+  padding: 7px;
+}
+
+.post {
+  height: 9%;
+  width: 20%;
+}
+
+#post {
+  height: 100%;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+#for-add-horse,
+#for-custom-wager,
+#one-dollar,
+#five-dollars,
+#ten-dollars,
+.choose-horse,
+#post {
+  border: none;
+  border-radius: 5px;
+  background-color: #4a4653;
+  color: #f8f9ef;
+}
+
+/* Above for single-race-wager.html */
 
 #sr-main {
   display: grid;
@@ -277,7 +364,6 @@ footer {
 }
 
 #race-again {
-  display: ;
   height: 100px;
   width: 200px;
 }
