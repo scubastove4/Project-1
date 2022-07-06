@@ -261,8 +261,7 @@ const checkWinner = (horse) => {
     deck.removeEventListener('click', moveHorse)
     let winnerPayout = payout(horse)
     wagerDisplay.innerText =
-      horses[`${horse}`].name.toUpperCase() +
-      ` wins! Backers collect $${winnerPayout}!`
+      horses[`${horse}`].name + ` wins! Backers collect $${winnerPayout}!`
     raceAgain.style.display = 'initial'
   }
 }

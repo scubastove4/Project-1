@@ -51,7 +51,7 @@ const addHorses = () => {
   newHorseButton.classList.add('choose-horse')
   newHorseButton.id = `horse${chooseHorses.length - 1}`
   newHorseButton.innerText = addHorse.value.toUpperCase()
-  horses[`${newHorseButton.id}`] = new Horse(`${addHorse.value}`)
+  horses[`${newHorseButton.id}`] = new Horse(`${addHorse.value.toUpperCase()}`)
   addHorse.value = ''
   if (Object.keys(horses).length === 8) {
     forAddHorse.removeEventListener('click', addHorses)
@@ -98,7 +98,7 @@ document.addEventListener('click', (e) => {
   if (e.target.matches('.choose-horse')) {
     horses[`${e.target.id}`].addWager()
     e.target.innerText =
-      horses[`${e.target.id}`].name.toUpperCase() +
+      horses[`${e.target.id}`].name +
       ' $' +
       horses[`${e.target.id}`].wagerAmount
   }

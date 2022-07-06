@@ -169,7 +169,7 @@ const payout = () => {
         winners.push(horses[`${horse}`].name)
       }
     })
-    wagerDisplay.innerText = `No Triple Crown today :( but ${winners[0].toUpperCase()}, ${winners[1].toUpperCase()}, ${winners[2].toUpperCase()} split the series and backers take home $${splitThree} each!`
+    wagerDisplay.innerText = `No Triple Crown today :( but ${winners[0]}, ${winners[1]}, ${winners[2]} split the series and backers take home $${splitThree} each!`
     winners = []
   } else if (winners.length === 2) {
     Object.keys(horses).forEach((horse) => {
@@ -183,13 +183,11 @@ const payout = () => {
       }
     })
     wagerDisplay.innerText = `Close but no cigar! With 2 wins ${
-      winners[0].toUpperCase()
+      winners[0]
       // need to add decimal limitations!
-    } backers take home $${
-      pool * 0.66
-    }, and with 1 win ${winners[1].toUpperCase()} backers take home $${
-      pool * 0.33
-    }!`
+    } backers take home $${pool * 0.66}, and with 1 win ${
+      winners[1]
+    } backers take home $${pool * 0.33}!`
     winners = []
   } else {
     Object.keys(horses).forEach((horse) => {
@@ -197,7 +195,7 @@ const payout = () => {
         winners.push(horses[`${horse}`].name)
       }
     })
-    wagerDisplay.innerText = `Hold on to your butts! ${winners[0].toUpperCase()} HAS WON THE TRIPLE CROWN! Backers take home ${pool}!`
+    wagerDisplay.innerText = `Hold on to your butts! ${winners[0]} HAS WON THE TRIPLE CROWN! Backers take home ${pool}!`
   }
 }
 
@@ -218,13 +216,13 @@ const checkWinner = (raceWinner) => {
     }, 0)
     if (leg === 1) {
       wagerDisplay.innerText =
-        horses[`${raceWinner}`].name.toUpperCase() + ` wins The Kentucky Derby!`
+        horses[`${raceWinner}`].name + ` wins The Kentucky Derby!`
       preakness.style.display = 'initial'
       totalWins = []
       return
     } else if (leg === 2) {
       wagerDisplay.innerText =
-        horses[`${raceWinner}`].name.toUpperCase() + ` wins The Preakness!`
+        horses[`${raceWinner}`].name + ` wins The Preakness!`
       belmont.style.display = 'initial'
       totalWins = []
       return
