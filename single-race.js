@@ -67,7 +67,6 @@ const renderRandomGoBackHorse = () => {
       goBackText.innerText = horses[`${randomGoBackHorse}`].name
       ++goBackCount
       allFlipCounts = []
-      console, console.log(goBackCount)
     }
   })
 }
