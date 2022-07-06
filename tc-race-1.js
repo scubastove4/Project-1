@@ -213,53 +213,14 @@ const payout = () => {
       })
       wagerDisplay.innerText = `Hold on to your butts! ${winners[0]} HAS WON THE TRIPLE CROWN! Backers take home ${pool}!`
   }
-  // if (winnersCounts.length === 3) {
-  //   let splitThree = pool / 3
-  //   Object.keys(horses).forEach((horse) => {
-  //     if (horses[`${horse}`].winCount === 1) {
-  //       winners.push(horses[`${horse}`].name)
-  //       console.log(winners)
-  //     }
-  //   })
-  //   wagerDisplay.innerText = `No Triple Crown today :( but ${winners[0]}, ${winners[1]}, ${winners[2]} split the series and backers take home $${splitThree} each!`
-  //   winners = []
-  // } else if (winners.length === 2) {
-  //   Object.keys(horses).forEach((horse) => {
-  //     if (horses[`${horse}`].winCount === 2) {
-  //       winners.push(horses[`${horse}`].name)
-  //       console.log(winners)
-  //     }
-  //   })
-  //   Object.keys(horses).forEach((horse) => {
-  //     if (horses[`${horse}`].winCount === 1) {
-  //       winners.push(horses[`${horse}`].name)
-  //       console.log(winners)
-  //     }
-  //   })
-  //   wagerDisplay.innerText = `Close but no cigar! With 2 wins ${
-  //     winners[0]
-  //     // need to add decimal limitations!
-  //   } backers take home $${pool * 0.66}, and with 1 win ${
-  //     winners[1]
-  //   } backers take home $${pool * 0.33}!`
-  //   winners = []
-  // } else if (winners.length === 1) {
-  //   Object.keys(horses).forEach((horse) => {
-  //     if (horses[`${horse}`].winCount === 3) {
-  //       winners.push(horses[`${horse}`].name)
-  //       console.log(winners)
-  //     }
-  //   })
-  //   wagerDisplay.innerText = `Hold on to your butts! ${winners[0]} HAS WON THE TRIPLE CROWN! Backers take home ${pool}!`
-  // }
 }
 
 const checkWinner = (raceWinner) => {
   if (horses[`${raceWinner}`].flipCount === 8) {
     ++horses[`${raceWinner}`].winCount
     horses[`${raceWinner}`].flipCount = null
-    deck.removeEventListener('click', moveHorse)
-    console.log(horses[`${raceWinner}`])
+    deck.removeEventListener('click', autoRunFunction)
+    clearInterval(autoRun)
     let totalWins = []
     Object.keys(horses).forEach((horse) => {
       if (horses[`${horse}`].winCount >= 1) {
@@ -305,6 +266,10 @@ const moveHorse = () => {
   })
 }
 
+const autoRunFunction = () => {
+  autoRun = setInterval(moveHorse, 1000)
+}
+
 const nextRace = (e) => {
   Object.keys(horses).forEach((horse, index) => {
     let removeClass = document.getElementById(`${horse}`)
@@ -316,11 +281,10 @@ const nextRace = (e) => {
   goBackCount = 1
   let pool = poolWagers()
   wagerDisplay.innerText = `Up for Grabs: $${pool}`
-  deck.addEventListener('click', moveHorse)
+  deck.addEventListener('click', autoRunFunction)
   goBacks.forEach((goBack) => {
     goBack.innerText = ''
   })
-  // Add clear wagerTitle and clear gbs
 }
 
 ///////////   Function above //////////////
@@ -337,7 +301,7 @@ window.addEventListener('load', () => {
   })
 })
 
-deck.addEventListener('click', moveHorse)
+deck.addEventListener('click', autoRunFunction)
 
 preakness.addEventListener('click', nextRace)
 belmont.addEventListener('click', nextRace)
