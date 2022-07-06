@@ -6,36 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script defer src="tc-wager-1.js"></script>
-    <title>Kentucky Derby</title>
+    <title>Triple Crown</title>
   </head>
-  <body>
-    <div class="add-horse">
-      <input
-        type="text"
-        name="add-horse"
-        id="add-horse"
-        placeholder="Name your horse"
-      />
-      <button id="for-add-horse">Add Horse to Race</button>
-    </div>
-    <br />
-    <div class="choose-wager">
-      <h2>Triple Crown Wager</h2>
-      <button id="tc-one-dollar">+&#36;1</button>
-      <button id="tc-five-dollars">+&#36;5</button>
-      <button id="tc-ten-dollars">+&#36;10</button>
-      <input
-        type="text"
-        name="custom-wager"
-        id="tc-custom-wager"
-        placeholder="Custom Wager"
-      />
-      <button id="tc-for-custom-wager">Enter Custom Wager</button>
-    </div>
-    <br />
-    <div id="horse-buttons"></div>
-    <a href="tc-race-1.html"
-      ><button id="post">First leg: The Kentucy Derby</button></a
-    >
+  <body id="tc-wager-body">
+    <span class="crown" id="c1">&#9819;</span>
+    <span class="crown" id="c2">&#9819;</span>
+    <span class="crown" id="c3">&#9819;</span>
+    <span class="crown" id="c4">&#9819;</span>
+    <span class="crown" id="c5">&#9819;</span>
+    <span class="crown" id="c6">&#9819;</span>
+    <span class="crown" id="c7">&#9819;</span>
+    <span class="crown" id="c8">&#9819;</span>
+    <span class="crown" id="c9">&#9819;</span>
+    <span class="crown" id="c10">&#9819;</span>
+    <span class="crown" id="c11">&#9819;</span>
+    <span class="crown" id="c12">&#9819;</span>
+    <span class="crown" id="c13">&#9819;</span>
+    <span class="crown" id="c14">&#9819;</span>
+    <h1 id="tc-wager-h1">DraftQueens SportsBook</h1>
+    <main id="tc-wager-main">
+      <h2 id="tc-wager-h2">Triple Crown Wager</h2>
+      <div class="add-horse">
+        <input
+          type="text"
+          name="add-horse"
+          id="add-horse"
+          placeholder="Name your horse"
+        />
+        <button id="for-add-horse">Add Horse to Race</button>
+      </div>
+      <div class="choose-wager">
+        <button id="tc-one-dollar">+&#36;1</button>
+        <button id="tc-five-dollars">+&#36;5</button>
+        <button id="tc-ten-dollars">+&#36;10</button>
+        <input
+          type="text"
+          name="custom-wager"
+          id="tc-custom-wager"
+          placeholder="Custom Wager"
+        />
+        <button id="tc-for-custom-wager">Enter Custom Wager</button>
+      </div>
+      <div id="horse-buttons"></div>
+      <a href="tc-race-1.html" class="tc-post"
+        ><button id="post">First leg: The Kentucy Derby</button></a
+      >
+    </main>
   </body>
 </html>

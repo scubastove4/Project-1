@@ -90,7 +90,8 @@ h2 {
 
 /* Above is index.html styling */
 
-#sr-wager-body {
+#sr-wager-body,
+#tc-wager-body {
   display: grid;
   grid-template: repeat(7, 1fr) / 1fr 4fr 1fr;
 
@@ -171,7 +172,8 @@ h2 {
   grid-row-start: 7;
 }
 
-#sr-wager-h1 {
+#sr-wager-h1,
+#tc-wager-h1 {
   justify-self: center;
 
   font-size: 5rem;
@@ -187,7 +189,8 @@ h2 {
 
 /* Help with text gradient https://cssgradient.io/blog/css-gradient-text/ */
 
-#sr-wager-main {
+#sr-wager-main,
+#tc-wager-main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -196,7 +199,8 @@ h2 {
   grid-row: 2 / span 6;
 }
 
-#sr-wager-h2 {
+#sr-wager-h2,
+#tc-wager-h2 {
   font-size: 5rem;
   color: #736f78;
   margin: 2% 0 3% 0;
@@ -232,6 +236,7 @@ input {
 
 #for-add-horse,
 #for-custom-wager,
+#tc-for-custom-wager,
 .choose-horse {
   font-size: 1rem;
   width: max-content;
@@ -240,7 +245,10 @@ input {
 
 #one-dollar,
 #five-dollars,
-#ten-dollars {
+#ten-dollars,
+#tc-one-dollar,
+#tc-five-dollars,
+#tc-ten-dollars {
   width: 4%;
   margin: 0 5px;
 }
@@ -255,10 +263,26 @@ input {
   width: 20%;
 }
 
+.tc-post {
+  height: 12%;
+  width: 25%;
+}
+
 #post {
   height: 100%;
   width: 100%;
   font-size: 1rem;
+}
+
+.add-horse,
+.choose-wager,
+#horse-buttons {
+  margin: 1% 0 2% 0;
+}
+
+.post,
+.tc-post {
+  margin-top: 1%;
 }
 
 #for-add-horse,
@@ -266,6 +290,10 @@ input {
 #one-dollar,
 #five-dollars,
 #ten-dollars,
+#tc-for-custom-wager,
+#tc-one-dollar,
+#tc-five-dollars,
+#tc-ten-dollars,
 .choose-horse,
 #post {
   border: none;
@@ -282,6 +310,10 @@ input {
 #one-dollar:hover,
 #five-dollars:hover,
 #ten-dollars:hover,
+#tc-for-custom-wager:hover,
+#tc-one-dollar:hover,
+#tc-five-dollars:hover,
+#tc-ten-dollars:hover,
 .choose-horse:hover,
 #post:hover {
   cursor: pointer;
