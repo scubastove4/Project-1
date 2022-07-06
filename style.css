@@ -1,6 +1,11 @@
-main {
+#sr-main {
   display: grid;
   grid-template-columns: repeat(18, 1fr);
+}
+
+#tc-main {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
 }
 
 .size,

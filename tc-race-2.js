@@ -6,6 +6,8 @@ const cardChoices = Object.keys(horses)
 const wagerDisplay = document.querySelector('#wager-pool')
 const goBacks = document.querySelectorAll('.go-back')
 let goBackCount = 1
+const preakness = document.querySelector('#preakness')
+const belmont = document.querySelector('#belmont')
 const raceAgain = document.querySelector('#race-again')
 
 ///////////   Globals above //////////////
@@ -52,7 +54,6 @@ const payout = (winningHorse) => {
 }
 
 const renderRandomGoBackHorse = () => {
-  // chooseRandomCard()
   let randomGoBackHorse = renderRandomHorse()
   Object.keys(horses).forEach((horse, index) => {
     if (horse === randomGoBackHorse) {
@@ -159,114 +160,18 @@ const goBackSpot = () => {
       } else {
         flipCount = []
       }
-      break
-    case 8:
-      Object.keys(horses).forEach((horse) => {
-        if (horses[`${horse}`].flipCount >= 8) {
-          allFlipCounts.push(horse)
-        }
-      })
-      if (allFlipCounts.length === Object.keys(horses).length) {
-        renderRandomGoBackHorse()
-      } else {
-        flipCount = []
-      }
-      break
-    case 9:
-      Object.keys(horses).forEach((horse) => {
-        if (horses[`${horse}`].flipCount >= 9) {
-          allFlipCounts.push(horse)
-        }
-      })
-      if (allFlipCounts.length === Object.keys(horses).length) {
-        renderRandomGoBackHorse()
-      } else {
-        flipCount = []
-      }
-      break
-    case 10:
-      Object.keys(horses).forEach((horse) => {
-        if (horses[`${horse}`].flipCount >= 10) {
-          allFlipCounts.push(horse)
-        }
-      })
-      if (allFlipCounts.length === Object.keys(horses).length) {
-        renderRandomGoBackHorse()
-      } else {
-        flipCount = []
-      }
-      break
-    case 11:
-      Object.keys(horses).forEach((horse) => {
-        if (horses[`${horse}`].flipCount >= 11) {
-          allFlipCounts.push(horse)
-        }
-      })
-      if (allFlipCounts.length === Object.keys(horses).length) {
-        renderRandomGoBackHorse()
-      } else {
-        flipCount = []
-      }
-      break
-    case 12:
-      Object.keys(horses).forEach((horse) => {
-        if (horses[`${horse}`].flipCount >= 12) {
-          allFlipCounts.push(horse)
-        }
-      })
-      if (allFlipCounts.length === Object.keys(horses).length) {
-        renderRandomGoBackHorse()
-      } else {
-        flipCount = []
-      }
-      break
-    case 13:
-      Object.keys(horses).forEach((horse) => {
-        if (horses[`${horse}`].flipCount >= 13) {
-          allFlipCounts.push(horse)
-        }
-      })
-      if (allFlipCounts.length === Object.keys(horses).length) {
-        renderRandomGoBackHorse()
-      } else {
-        flipCount = []
-      }
-      break
-    case 14:
-      Object.keys(horses).forEach((horse) => {
-        if (horses[`${horse}`].flipCount >= 14) {
-          allFlipCounts.push(horse)
-        }
-      })
-      if (allFlipCounts.length === Object.keys(horses).length) {
-        renderRandomGoBackHorse()
-      } else {
-        flipCount = []
-      }
-      break
-    case 15:
-      Object.keys(horses).forEach((horse) => {
-        if (horses[`${horse}`].flipCount >= 15) {
-          allFlipCounts.push(horse)
-        }
-      })
-      if (allFlipCounts.length === Object.keys(horses).length) {
-        renderRandomGoBackHorse()
-      } else {
-        flipCount = []
-      }
   }
 }
 
 const checkWinner = (horse) => {
-  if (horses[`${horse}`].flipCount === 16) {
+  if (horses[`${horse}`].flipCount === 8) {
     deck.removeEventListener('click', moveHorse)
     let winnerPayout = payout(horse)
     wagerDisplay.innerText =
       horses[`${horse}`].name.toUpperCase() +
-      ` wins! Backers collect $${winnerPayout}!`
-    raceAgain.style.display = 'initial'
+      ` wins! Backers collect $${winnerPayout} for this race!`
   }
+  raceAgain.style.display = 'initial'
 }
 
 const moveHorse = () => {
@@ -293,6 +198,8 @@ deck.addEventListener('click', moveHorse)
 window.addEventListener('load', () => {
   createHorse()
   poolWagers()
+  preakness.style.display = 'none'
+  belmont.style.display = 'none'
   raceAgain.style.display = 'none'
   track.style.gridTemplateRows = `repeat(${Object.keys(horses).length + 1}, 1fr`
   goBacks.forEach((goBack) => {
