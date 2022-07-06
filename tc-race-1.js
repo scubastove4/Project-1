@@ -6,6 +6,7 @@ const cardChoices = Object.keys(horses)
 const wagerDisplay = document.querySelector('#wager-pool')
 const goBacks = document.querySelectorAll('.go-back')
 let goBackCount = 1
+let autoRun
 const preakness = document.querySelector('#preakness')
 const belmont = document.querySelector('#belmont')
 const raceAgain = document.querySelector('#race-again')
@@ -261,7 +262,7 @@ const moveHorse = () => {
       addClass.classList.add('spot' + horses[`${randomHorse}`].flipCount)
       discard.innerText = horses[`${randomHorse}`].name
     }
-    goBackSpot()
+    setTimeout(goBackSpot, 500)
     checkWinner(randomHorse) //is this rendering a random horse everytime?
   })
 }

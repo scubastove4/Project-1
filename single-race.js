@@ -281,7 +281,7 @@ const moveHorse = () => {
       addClass.classList.add('spot' + horses[`${randomHorse}`].flipCount)
       discard.innerText = horses[`${randomHorse}`].name
     }
-    goBackSpot()
+    setTimeout(goBackSpot, 500)
     checkWinner(randomHorse)
   })
 }
@@ -289,6 +289,8 @@ const moveHorse = () => {
 const autoRunFunction = () => {
   autoRun = setInterval(moveHorse, 1000)
 }
+
+// Help for setInterval https://youtu.be/GhePFBkdNYk
 
 ///////////   Function above //////////////
 
