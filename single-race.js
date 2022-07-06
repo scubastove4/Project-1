@@ -6,6 +6,7 @@ const cardChoices = Object.keys(horses)
 const wagerDisplay = document.querySelector('#wager-pool')
 const goBacks = document.querySelectorAll('.go-back')
 let goBackCount = 1
+let autoRun
 const raceAgain = document.querySelector('#race-again')
 
 ///////////   Globals above //////////////
@@ -258,11 +259,13 @@ const goBackSpot = () => {
 
 const checkWinner = (horse) => {
   if (horses[`${horse}`].flipCount === 16) {
-    deck.removeEventListener('click', moveHorse)
+    deck.removeEventListener('click', autoRunFunction)
+    clearInterval(autoRun)
     let winnerPayout = payout(horse)
     wagerDisplay.innerText =
       horses[`${horse}`].name + ` wins! Backers collect $${winnerPayout}!`
     raceAgain.style.display = 'initial'
+    return true
   }
 }
 
@@ -283,9 +286,11 @@ const moveHorse = () => {
   })
 }
 
-///////////   Function above //////////////
+const autoRunFunction = () => {
+  autoRun = setInterval(moveHorse, 1000)
+}
 
-deck.addEventListener('click', moveHorse)
+///////////   Function above //////////////
 
 window.addEventListener('load', () => {
   createHorse()
@@ -296,3 +301,5 @@ window.addEventListener('load', () => {
     goBack.style.gridRowStart = `${Object.keys(horses).length + 1}`
   })
 })
+
+deck.addEventListener('click', autoRunFunction)
