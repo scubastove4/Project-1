@@ -204,6 +204,7 @@ const payout = () => {
 const checkWinner = (raceWinner) => {
   if (horses[`${raceWinner}`].flipCount === 8) {
     ++horses[`${raceWinner}`].winCount
+    horses[`${raceWinner}`].flipCount = null
     deck.removeEventListener('click', moveHorse)
     console.log(horses[`${raceWinner}`])
     let totalWins = []
@@ -256,11 +257,17 @@ const nextRace = (e) => {
   Object.keys(horses).forEach((horse, index) => {
     let removeClass = document.getElementById(`${horse}`)
     removeClass.classList.remove('spot' + horses[`${horse}`].flipCount)
+    removeClass.classList.remove('spot8')
     horses[`${horse}`].flipCount = null
   })
   e.target.style.display = 'none'
   goBackCount = 1
+  let pool = poolWagers()
+  wagerDisplay.innerText = `Up for Grabs: $${pool}`
   deck.addEventListener('click', moveHorse)
+  goBacks.forEach((goBack) => {
+    goBack.innerText = ''
+  })
   // Add clear wagerTitle and clear gbs
 }
 
@@ -281,3 +288,4 @@ window.addEventListener('load', () => {
 deck.addEventListener('click', moveHorse)
 
 preakness.addEventListener('click', nextRace)
+belmont.addEventListener('click', nextRace)
