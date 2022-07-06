@@ -105,6 +105,7 @@ h2 {
   grid-column-end: span 1;
   grid-row-start: 1;
   align-self: center;
+  text-shadow: 2px 2px 5px #4a4653;
 }
 
 #c1,
@@ -174,13 +175,14 @@ h2 {
   justify-self: center;
 
   font-size: 5rem;
-  background: -webkit-linear-gradient(#36f80a, #ffa723 80%);
-  -webkit-background-clip: text;
+  /* background: -webkit-linear-gradient(#36f80a, #ffa723 80%); */
+  /* -webkit-background-clip: text; */
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-color: #736f78;
-  -webkit-text-stroke-width: 0.5px;
-  letter-spacing: 2px;
+  /* -webkit-text-stroke-color: #736f78;
+  -webkit-text-stroke-width: 0.5px; */
+  letter-spacing: 3px;
   height: 5rem;
+  text-shadow: 3px 6px 1px #36f80a, 8px 11px 2px #ffa723, 10px 15px 3px #4a4653;
 }
 
 /* Help with text gradient https://cssgradient.io/blog/css-gradient-text/ */
@@ -196,12 +198,15 @@ h2 {
 
 #sr-wager-h2 {
   font-size: 5rem;
-  color: #4a4653;
+  color: #736f78;
   margin: 2% 0 3% 0;
-  -webkit-text-stroke-color: #f8f9ef;
-  -webkit-text-stroke-width: 1px;
+  text-shadow: 2px 1px 5px #ffa723, -1px -1px 2px #36f80a, 5px 4px 3px #4a4653;
+  /* -webkit-text-stroke-color: #736f78;
+  -webkit-text-stroke-width: 0.5px; */
   letter-spacing: 1px;
 }
+
+/* Help with text-shadow https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow */
 
 .add-horse,
 .choose-wager {
@@ -215,6 +220,14 @@ input,
 #for-add-horses,
 #for-custom-wager {
   height: 100%;
+}
+
+input {
+  margin: 0 10px 0 20px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: inset 1px 1px 5px 1px #4a4653, -0.5px -0.5px 5px 1px #4a4653;
+  text-align: center;
 }
 
 #for-add-horse,
@@ -238,14 +251,14 @@ input,
 }
 
 .post {
-  height: 9%;
+  height: 12%;
   width: 20%;
 }
 
 #post {
   height: 100%;
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 #for-add-horse,
@@ -257,8 +270,21 @@ input,
 #post {
   border: none;
   border-radius: 5px;
-  background-color: #4a4653;
+  background-color: #736f78;
   color: #f8f9ef;
+  box-shadow: 2px 1px 5px 1px #4a4653, -0.5px -0.5px 3px 1px #f6f7eb;
+}
+
+/* Help for box-shadow https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+
+#for-add-horse:hover,
+#for-custom-wager:hover,
+#one-dollar:hover,
+#five-dollars:hover,
+#ten-dollars:hover,
+.choose-horse:hover,
+#post:hover {
+  cursor: pointer;
 }
 
 /* Above for single-race-wager.html */
