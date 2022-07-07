@@ -60,6 +60,8 @@ const renderRandomGoBackHorse = () => {
         'spot' + (horses[`${randomGoBackHorse}`].flipCount - 1)
       )
       --horses[`${randomGoBackHorse}`].flipCount
+      goBackClass.style.animationName =
+        'goBack' + horses[`${randomGoBackHorse}`].flipCount
       let goBackText = document.getElementById(`gb${goBackCount}`)
       goBackText.innerText = horses[`${randomGoBackHorse}`].name
       ++goBackCount
@@ -261,14 +263,16 @@ const moveHorse = () => {
       )
       addClass.classList.add('spot' + horses[`${randomHorse}`].flipCount)
       discard.innerText = horses[`${randomHorse}`].name
+      addClass.style.animationName =
+        'moveUp' + horses[`${randomHorse}`].flipCount
     }
-    setTimeout(goBackSpot, 500)
-    checkWinner(randomHorse) //is this rendering a random horse everytime?
+    setTimeout(goBackSpot, 300)
+    checkWinner(randomHorse)
   })
 }
 
 const autoRunFunction = () => {
-  autoRun = setInterval(moveHorse, 1000)
+  autoRun = setInterval(moveHorse, 1200)
 }
 
 const nextRace = (e) => {
