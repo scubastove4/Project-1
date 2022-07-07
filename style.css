@@ -5,7 +5,7 @@
   /* Royal Acid source https://www.urbanfonts.com/fonts/Royal_Acid.htm */
 }
 @font-face {
-  src: url(American-Purpose-Casual-02.ttf);
+  src: url(Fonts/American-Purpose-Casual-02.ttf);
   font-family: purpose;
   /*American Purpose Casual source https://maxfonts.com/fonts/a/american-purpose-casual.font */
 }
@@ -16,6 +16,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  font-family: purpose;
 }
 
 a {
@@ -34,7 +42,6 @@ a {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
 }
 
 h1,
@@ -104,8 +111,6 @@ h2 {
   grid-template: repeat(7, 1fr) / 1fr 4fr 1fr;
 
   background-color: #736f78;
-  height: 100vh;
-  width: 100vw;
 }
 
 .crown {
@@ -330,10 +335,11 @@ input {
 
 /* ----------------------------------Styling above for single-race-wager.html and tc-wager-1.js ------------------*/
 
-body {
-  display: flex;
-  flex-direction: column;
-  font-family: purpose;
+header {
+  align-self: center;
+
+  height: 10%;
+  font-size: 2.75rem;
 }
 
 #horse0 {
@@ -841,28 +847,6 @@ body {
   background-size: contain;
 }
 
-#card-deck,
-#discard {
-  height: 5rem;
-  width: 3rem;
-  place-self: center;
-}
-
-#card-deck,
-#discard {
-  margin-top: 10px;
-}
-
-#discard {
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  font-size: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .info {
   grid-column-start: 1;
   grid-column-end: span 1;
@@ -884,31 +868,89 @@ body {
   justify-content: center;
   align-items: center;
 
-  height: 3em;
-  width: 4em;
+  height: 80%;
+  width: 80%;
 }
 
 /* Help for changing text direction https://www.youtube.com/watch?v=AFc3-qPJlB0 */
 
 footer {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 2fr 1fr;
+  align-items: center;
+  justify-items: center;
+  /* margin-top: 2%; */
+
+  height: 15%;
+  width: 100%;
+}
+
+#card-deck,
+#discard {
+  grid-column-end: span 1;
+  grid-row-end: span 2;
+
+  height: 70%;
+  width: 30%;
+}
+
+#card-deck {
+  grid-column-start: 1;
+}
+
+#discard {
+  grid-column-start: 3;
+
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 12px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
-#race-again {
-  height: 100px;
-  width: 200px;
+/* #wager-pool {
+  justify-self: center;
+} */
+
+#wager-pool {
+  grid-column-start: 2;
+  grid-column-end: span 1;
+  grid-row-start: 1;
 }
 
-/* Styling for both race tracks above */
+.race-again {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  grid-column-start: 2;
+  grid-column-end: span 1;
+  grid-row-start: 2;
+  align-self: center;
+
+  height: 100%;
+  width: 25%;
+}
+
+#race-again {
+  height: 60%;
+  width: fit-content;
+  padding: 1% 3%;
+  font-size: 1rem;
+  font-family: purpose;
+}
+
+/* ---------------------------------Styling for both race tracks above -------------------------------- */
 
 #sr-main {
   display: grid;
   grid-template-columns: repeat(18, 1fr);
   justify-items: center;
   align-items: center;
+
+  height: 75%;
 }
 
 /* Styling for single-race.html above */
@@ -916,9 +958,8 @@ footer {
 #tc-main {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-}
+  justify-items: center;
+  align-items: center;
 
-#tc-header {
-  align-self: center;
-  font-size: 2.75rem;
+  height: 75%;
 }

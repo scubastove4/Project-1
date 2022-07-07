@@ -1,4 +1,5 @@
 const horses = JSON.parse(sessionStorage.getItem('HORSES'))
+const announcements = document.querySelector('header')
 const track = document.querySelector('#sr-main')
 const deck = document.querySelector('#card-deck')
 const discard = document.querySelector('#discard')
@@ -269,8 +270,8 @@ const checkWinner = (horse) => {
     deck.removeEventListener('click', autoRunFunction)
     clearInterval(autoRun)
     let winnerPayout = payout(horse)
-    wagerDisplay.innerText =
-      horses[`${horse}`].name + ` wins! Backers collect $${winnerPayout}!`
+    announcements.innerText =
+      horses[`${horse}`].name + ` wins! Backers collect ${winnerPayout} points!`
     raceAgain.style.display = 'initial'
     return true
   }
