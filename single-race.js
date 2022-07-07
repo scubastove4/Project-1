@@ -13,18 +13,21 @@ const raceAgain = document.querySelector('#race-again')
 
 const createHorse = () => {
   Object.keys(horses).forEach((horse, index) => {
+    const newDivWager = document.createElement('div')
+    track.appendChild(newDivWager)
+    newDivWager.classList.add(`horse${index}`)
+    newDivWager.classList.add('info')
+    newDivWager.innerText =
+      horses[`${horse}`].name + ': ' + horses[`${horse}`].wagerAmount
     const newDivHorse = document.createElement('div')
     track.appendChild(newDivHorse)
     newDivHorse.classList.add('horse')
     newDivHorse.classList.add('post')
-    newDivHorse.classList.add('size')
     newDivHorse.style.animationName = 'rotate'
     newDivHorse.id = `horse${index}`
     const horseSpan = document.createElement('span')
     newDivHorse.appendChild(horseSpan)
-    horseSpan.classList.add('spans')
-    horseSpan.innerText =
-      horses[`${horse}`].name + ': ' + horses[`${horse}`].wagerAmount
+    newDivHorse.innerText = `${index + 1}`
   })
   sessionStorage.clear()
 }
@@ -68,7 +71,8 @@ const renderRandomGoBackHorse = () => {
       goBackClass.style.animationName =
         'goBack' + horses[`${randomGoBackHorse}`].flipCount
       let goBackText = document.getElementById(`gb${goBackCount}`)
-      goBackText.innerText = horses[`${randomGoBackHorse}`].name
+      goBackText.innerText = `${index + 1}`
+      goBackText.style.backgroundImage = 'url(90-front-of-playing-card.png)'
       ++goBackCount
       allFlipCounts = []
     }
@@ -282,7 +286,8 @@ const moveHorse = () => {
         'spot' + (horses[`${randomHorse}`].flipCount - 1)
       )
       addClass.classList.add('spot' + horses[`${randomHorse}`].flipCount)
-      discard.innerText = horses[`${randomHorse}`].name
+      discard.style.backgroundImage = 'url(front-of-playing-card.png)'
+      discard.innerText = `${index + 1}`
       addClass.style.animationName =
         'moveUp' + horses[`${randomHorse}`].flipCount
       setTimeout(goBackSpot, 300)
@@ -295,6 +300,8 @@ const moveHorse = () => {
 
 const autoRunFunction = () => {
   autoRun = setInterval(moveHorse, 1200)
+  const audio = document.querySelector('audio')
+  audio.play()
 }
 
 // Help for setInterval https://youtu.be/GhePFBkdNYk

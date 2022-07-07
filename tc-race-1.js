@@ -1,4 +1,5 @@
 const horses = JSON.parse(sessionStorage.getItem('HORSES'))
+const announcements = document.querySelector('header')
 const track = document.querySelector('main')
 const deck = document.querySelector('#card-deck')
 const discard = document.querySelector('#discard')
@@ -18,14 +19,15 @@ const createHorse = () => {
     const newDivWager = document.createElement('div')
     track.appendChild(newDivWager)
     newDivWager.classList.add(`horse${index}`)
-    newDivWager.classList.add('size')
+    newDivWager.classList.add('info')
     newDivWager.innerText =
       horses[`${horse}`].name + ': ' + horses[`${horse}`].tcWagerAmount
     const newDivHorse = document.createElement('div')
     track.appendChild(newDivHorse)
+    newDivHorse.classList.add('horse')
     newDivHorse.classList.add('post')
-    newDivHorse.classList.add('size')
     newDivHorse.id = `horse${index}`
+    newDivHorse.innerText = `${index + 1}`
   })
   sessionStorage.clear()
 }
@@ -63,7 +65,8 @@ const renderRandomGoBackHorse = () => {
       goBackClass.style.animationName =
         'goBack' + horses[`${randomGoBackHorse}`].flipCount
       let goBackText = document.getElementById(`gb${goBackCount}`)
-      goBackText.innerText = horses[`${randomGoBackHorse}`].name
+      goBackText.innerText = `${index + 1}`
+      goBackText.style.backgroundImage = 'url(90-front-of-playing-card.png)'
       ++goBackCount
       allFlipCounts = []
     }
@@ -262,7 +265,8 @@ const moveHorse = () => {
         'spot' + (horses[`${randomHorse}`].flipCount - 1)
       )
       addClass.classList.add('spot' + horses[`${randomHorse}`].flipCount)
-      discard.innerText = horses[`${randomHorse}`].name
+      discard.style.backgroundImage = 'url(front-of-playing-card.png)'
+      discard.innerText = `${index + 1}`
       addClass.style.animationName =
         'moveUp' + horses[`${randomHorse}`].flipCount
     }
@@ -273,9 +277,12 @@ const moveHorse = () => {
 
 const autoRunFunction = () => {
   autoRun = setInterval(moveHorse, 1200)
+  const audio = document.querySelector('audio')
+  audio.play()
 }
 
 const nextRace = (e) => {
+  let totalWins = []
   Object.keys(horses).forEach((horse, index) => {
     let removeClass = document.getElementById(`${horse}`)
     removeClass.classList.remove('spot' + horses[`${horse}`].flipCount)
@@ -290,6 +297,22 @@ const nextRace = (e) => {
   goBacks.forEach((goBack) => {
     goBack.innerText = ''
   })
+  Object.keys(horses).forEach((horse) => {
+    if (horses[`${horse}`].winCount >= 1) {
+      totalWins.push(horses[`${horse}`].winCount)
+    }
+  })
+  let leg = totalWins.reduce((accumulator, value) => {
+    return accumulator + value
+  }, 0)
+  if (leg === 1) {
+    announcements.innerText = 'The Preakness'
+  } else if (leg === 2) {
+    announcements.innerText = 'The Belmont Stakes'
+  }
+  goBacks.forEach((goBack) => {
+    goBack.style.backgroundImage = 'url(90-vippng.com-joker-playing-card.png)'
+  })
 }
 
 ///////////   Function above //////////////
@@ -303,10 +326,13 @@ window.addEventListener('load', () => {
   track.style.gridTemplateRows = `repeat(${Object.keys(horses).length + 1}, 1fr`
   goBacks.forEach((goBack) => {
     goBack.style.gridRowStart = `${Object.keys(horses).length + 1}`
+    announcements.innerText = 'The Kentucky Derby'
   })
 })
 
 deck.addEventListener('click', autoRunFunction)
+
+// Sound for race start https://www.audiomicro.com/start-of-horse-race-sports-games-start-of-horse-race-sound-effects-44772
 
 preakness.addEventListener('click', nextRace)
 belmont.addEventListener('click', nextRace)

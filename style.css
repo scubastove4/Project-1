@@ -65,7 +65,7 @@ h2 {
 
 #index-sr,
 #index-tc {
-  background-color: #f8f9ef;
+  background-color: #988768;
   padding: 5px;
   border: none;
   border-radius: 5px;
@@ -76,10 +76,12 @@ h2 {
 
 #index-sr {
   margin-right: 20%;
+  box-shadow: -0.8px 2px 5px 1px #5c442a, 2px -0.8px 3px 1px #c9b88d;
 }
 
 #index-tc {
   margin-left: 20%;
+  box-shadow: 2px 2px 5px 1px #5c442a, -0.8px -0.8px 3px 1px #c9b88d;
 }
 
 #index-sr,
@@ -321,11 +323,6 @@ input {
 
 /* Styling above for single-race-wager.html and tc-wager-1.js*/
 
-.horse {
-  grid-column-end: span 1;
-  grid-row-end: span 1;
-}
-
 #horse0 {
   grid-row-start: 1;
   grid-row-end: span 1;
@@ -367,7 +364,7 @@ input {
 }
 
 .post {
-  grid-column-start: 1;
+  grid-column-start: 2;
   grid-column-end: span 1;
 }
 
@@ -379,7 +376,7 @@ input {
 
 .spot1,
 #gb1 {
-  grid-column-start: 2;
+  grid-column-start: 3;
   grid-column-end: span 1;
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
@@ -388,7 +385,7 @@ input {
 
 .spot2,
 #gb2 {
-  grid-column-start: 3;
+  grid-column-start: 4;
   grid-column-end: span 1;
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
@@ -397,7 +394,7 @@ input {
 
 .spot3,
 #gb3 {
-  grid-column-start: 4;
+  grid-column-start: 5;
   grid-column-end: span 1;
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
@@ -406,7 +403,7 @@ input {
 
 .spot4,
 #gb4 {
-  grid-column-start: 5;
+  grid-column-start: 6;
   grid-column-end: span 1;
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
@@ -415,7 +412,7 @@ input {
 
 .spot5,
 #gb5 {
-  grid-column-start: 6;
+  grid-column-start: 7;
   grid-column-end: span 1;
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
@@ -424,7 +421,7 @@ input {
 
 .spot6,
 #gb6 {
-  grid-column-start: 7;
+  grid-column-start: 8;
   grid-column-end: span 1;
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
@@ -433,7 +430,7 @@ input {
 
 .spot7,
 #gb7 {
-  grid-column-start: 8;
+  grid-column-start: 9;
   grid-column-end: span 1;
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
@@ -442,7 +439,7 @@ input {
 
 .spot8,
 #gb8 {
-  grid-column-start: 9;
+  grid-column-start: 10;
   grid-column-end: span 1;
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
@@ -453,7 +450,7 @@ input {
 
 .spot9,
 #gb9 {
-  grid-column-start: 10;
+  grid-column-start: 11;
   grid-column-end: span 1;
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
@@ -462,7 +459,7 @@ input {
 
 .spot10,
 #gb10 {
-  grid-column-start: 11;
+  grid-column-start: 12;
   grid-column-end: span 1;
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
@@ -471,7 +468,7 @@ input {
 
 .spot11,
 #gb11 {
-  grid-column-start: 12;
+  grid-column-start: 13;
   grid-column-end: span 1;
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
@@ -480,7 +477,7 @@ input {
 
 .spot12,
 #gb12 {
-  grid-column-start: 13;
+  grid-column-start: 14;
   grid-column-end: span 1;
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
@@ -489,7 +486,7 @@ input {
 
 .spot13,
 #gb13 {
-  grid-column-start: 14;
+  grid-column-start: 15;
   grid-column-end: span 1;
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
@@ -498,7 +495,7 @@ input {
 
 .spot14,
 #gb14 {
-  grid-column-start: 15;
+  grid-column-start: 16;
   grid-column-end: span 1;
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
@@ -507,7 +504,7 @@ input {
 
 .spot15,
 #gb15 {
-  grid-column-start: 16;
+  grid-column-start: 17;
   grid-column-end: span 1;
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
@@ -515,7 +512,7 @@ input {
 }
 
 .spot16 {
-  grid-column-start: 17;
+  grid-column-start: 18;
   grid-column-end: span 1;
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
@@ -524,288 +521,288 @@ input {
 
 @keyframes moveUp1 {
   0% {
-    transform: rotate(-90deg) translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes moveUp2 {
   0% {
-    transform: rotate(-90deg) translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes moveUp3 {
   0% {
-    transform: rotate(-90deg) translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes moveUp4 {
   0% {
-    transform: rotate(-90deg) translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes moveUp5 {
   0% {
-    transform: rotate(-90deg) translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes moveUp6 {
   0% {
-    transform: rotate(-90deg) translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes moveUp7 {
   0% {
-    transform: rotate(-90deg) translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes moveUp8 {
   0% {
-    transform: rotate(-90deg) translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes moveUp9 {
   0% {
-    transform: rotate(-90deg) translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes moveUp10 {
   0% {
-    transform: rotate(-90deg) translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes moveUp11 {
   0% {
-    transform: rotate(-90deg) translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes moveUp12 {
   0% {
-    transform: rotate(-90deg) translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes moveUp13 {
   0% {
-    transform: rotate(-90deg) translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes moveUp14 {
   0% {
-    transform: rotate(-90deg) translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes moveUp15 {
   0% {
-    transform: rotate(-90deg) translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes moveUp16 {
   0% {
-    transform: rotate(-90deg) translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes goBack0 {
   0% {
-    transform: rotate(-90deg) translateY(100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes goBack1 {
   0% {
-    transform: rotate(-90deg) translateY(100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes goBack2 {
   0% {
-    transform: rotate(-90deg) translateY(100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 @keyframes goBack3 {
   0% {
-    transform: rotate(-90deg) translateY(100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes goBack4 {
   0% {
-    transform: rotate(-90deg) translateY(100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes goBack5 {
   0% {
-    transform: rotate(-90deg) translateY(100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes goBack6 {
   0% {
-    transform: rotate(-90deg) translateY(100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes goBack {
   0% {
-    transform: rotate(-90deg) translateY(100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes goBack7 {
   0% {
-    transform: rotate(-90deg) translateY(100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes goBack8 {
   0% {
-    transform: rotate(-90deg) translateY(100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes goBack9 {
   0% {
-    transform: rotate(-90deg) translateY(100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes goBack10 {
   0% {
-    transform: rotate(-90deg) translateY(100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes goBack11 {
   0% {
-    transform: rotate(-90deg) translateY(100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes goBack12 {
   0% {
-    transform: rotate(-90deg) translateY(100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes goBack13 {
   0% {
-    transform: rotate(-90deg) translateY(100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes goBack14 {
   0% {
-    transform: rotate(-90deg) translateY(100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: rotate(-90deg) translateY(0px);
+    transform: translateX(0px);
   }
 }
 
@@ -823,13 +820,14 @@ input {
   background-size: contain;
 }
 
-.horse,
 .go-back {
-  transform: rotate(-90deg);
+  border-radius: 5px;
+  background-image: url(90-vippng.com-joker-playing-card.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.horse,
-.go-back,
 #card-deck,
 #discard {
   height: 5rem;
@@ -842,10 +840,7 @@ input {
   margin-top: 10px;
 }
 
-#discard,
-.horse {
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-    url(front-of-playing-card.png);
+#discard {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -855,9 +850,32 @@ input {
   align-items: center;
 }
 
-.spans {
-  writing-mode: vertical-rl;
+.info {
+  grid-column-start: 1;
+  grid-column-end: span 1;
 }
+
+.horse {
+  background-image: url(90-front-of-playing-card.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* font-size: 12px; */
+  grid-column-end: span 1;
+  grid-row-end: span 1;
+}
+
+.horse,
+.go-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 3em;
+  width: 4em;
+}
+
+/* Help for changing text direction https://www.youtube.com/watch?v=AFc3-qPJlB0 */
 
 footer {
   display: flex;
@@ -875,7 +893,7 @@ footer {
 
 #sr-main {
   display: grid;
-  grid-template-columns: repeat(17, 1fr);
+  grid-template-columns: repeat(18, 1fr);
   justify-items: center;
   align-items: center;
 }
