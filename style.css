@@ -24,6 +24,12 @@ body {
   display: flex;
   flex-direction: column;
   font-family: purpose;
+  background-image: url(tim-mossholder-ysDq0fY-bzo-unsplash.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* Pic from Unsplash https://unsplash.com/photos/ysDq0fY-bzo */
 }
 
 a {
@@ -110,6 +116,7 @@ h2 {
   display: grid;
   grid-template: repeat(7, 1fr) / 1fr 4fr 1fr;
 
+  background-image: none;
   background-color: #736f78;
 }
 
@@ -338,8 +345,15 @@ input {
 header {
   align-self: center;
 
+  padding-top: 0.5%;
   height: 10%;
   font-size: 2.75rem;
+}
+
+header,
+.info,
+#wager-pool {
+  color: #fdf0d5;
 }
 
 #horse0 {
@@ -825,11 +839,6 @@ header {
   }
 }
 
-.go-back {
-  grid-row-end: span 1;
-  order: 9;
-}
-
 .go-back,
 #card-deck {
   border-radius: 5px;
@@ -840,26 +849,22 @@ header {
 }
 
 .go-back {
-  border-radius: 5px;
-  background-image: url(90-vippng.com-joker-playing-card.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
+  grid-row-end: span 1;
+  order: 9;
 
-.info {
-  grid-column-start: 1;
-  grid-column-end: span 1;
-  place-self: center;
+  background-image: url(90-vippng.com-joker-playing-card.png);
+  height: 1em;
 }
 
 .horse {
+  grid-column-end: span 1;
+  grid-row-end: span 1;
+
   background-image: url(90-front-of-playing-card.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  grid-column-end: span 1;
-  grid-row-end: span 1;
+  border-radius: 5px;
 }
 
 .horse,
@@ -872,6 +877,23 @@ header {
   width: 80%;
 }
 
+.info {
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  place-self: center;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  font-size: 1rem;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+
 /* Help for changing text direction https://www.youtube.com/watch?v=AFc3-qPJlB0 */
 
 footer {
@@ -879,7 +901,6 @@ footer {
   grid-template: 1fr 1fr / 1fr 2fr 1fr;
   align-items: center;
   justify-items: center;
-  /* margin-top: 2%; */
 
   height: 15%;
   width: 100%;
@@ -910,14 +931,12 @@ footer {
   align-items: center;
 }
 
-/* #wager-pool {
-  justify-self: center;
-} */
-
 #wager-pool {
   grid-column-start: 2;
   grid-column-end: span 1;
   grid-row-start: 1;
+
+  font-size: 1.5rem;
 }
 
 .race-again {

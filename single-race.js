@@ -24,7 +24,6 @@ const createHorse = () => {
     track.appendChild(newDivHorse)
     newDivHorse.classList.add('horse')
     newDivHorse.classList.add('post')
-    newDivHorse.style.animationName = 'rotate'
     newDivHorse.id = `horse${index}`
     const horseSpan = document.createElement('span')
     newDivHorse.appendChild(horseSpan)
@@ -315,7 +314,7 @@ window.addEventListener('load', () => {
   raceAgain.style.display = 'none'
   track.style.gridTemplateRows = `repeat(${
     Object.keys(horses).length + 1
-  }, 1fr), 2fr`
+  }, 1fr)`
   goBacks.forEach((goBack) => {
     goBack.style.gridRowStart = `${Object.keys(horses).length + 1}`
   })
