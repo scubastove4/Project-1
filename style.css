@@ -258,12 +258,12 @@ input {
   padding: 7px;
 }
 
-.post {
+.to-post {
   height: 12%;
   width: 20%;
 }
 
-.tc-post {
+.tc-to-post {
   height: 12%;
   width: 25%;
 }
@@ -280,8 +280,8 @@ input {
   margin: 1% 0 2% 0;
 }
 
-.post,
-.tc-post {
+.to-post,
+.tc-to-post {
   margin-top: 1%;
 }
 
@@ -319,17 +319,7 @@ input {
   cursor: pointer;
 }
 
-/* Above for single-race-wager.html */
-
-#sr-main {
-  display: grid;
-  grid-template-columns: repeat(18, 1fr);
-}
-
-#tc-main {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-}
+/* Styling above for single-race-wager.html and tc-wager-1.js*/
 
 .size,
 .go-back {
@@ -405,99 +395,442 @@ input {
   grid-column-end: span 1;
 }
 
+.spot0 {
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+
 .spot1,
 #gb1 {
   grid-column-start: 3;
   grid-column-end: span 1;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
 }
 
 .spot2,
 #gb2 {
   grid-column-start: 4;
   grid-column-end: span 1;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
 }
 
 .spot3,
 #gb3 {
   grid-column-start: 5;
   grid-column-end: span 1;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
 }
 
 .spot4,
 #gb4 {
   grid-column-start: 6;
   grid-column-end: span 1;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
 }
 
 .spot5,
 #gb5 {
   grid-column-start: 7;
   grid-column-end: span 1;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
 }
 
 .spot6,
 #gb6 {
   grid-column-start: 8;
   grid-column-end: span 1;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
 }
 
 .spot7,
 #gb7 {
   grid-column-start: 9;
   grid-column-end: span 1;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
 }
 
 .spot8,
 #gb8 {
   grid-column-start: 10;
   grid-column-end: span 1;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
 }
+
+/*gb8 above and remaining spot/gb combos below not included in TC races*/
 
 .spot9,
 #gb9 {
   grid-column-start: 11;
   grid-column-end: span 1;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
 }
 
 .spot10,
 #gb10 {
   grid-column-start: 12;
   grid-column-end: span 1;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
 }
 
 .spot11,
 #gb11 {
   grid-column-start: 13;
   grid-column-end: span 1;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
 }
 
 .spot12,
 #gb12 {
   grid-column-start: 14;
   grid-column-end: span 1;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
 }
 
 .spot13,
 #gb13 {
   grid-column-start: 15;
   grid-column-end: span 1;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
 }
 
 .spot14,
 #gb14 {
   grid-column-start: 16;
   grid-column-end: span 1;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
 }
 
 .spot15,
 #gb15 {
   grid-column-start: 17;
   grid-column-end: span 1;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
 }
 
 .spot16 {
   grid-column-start: 18;
   grid-column-end: span 1;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+
+@keyframes moveUp1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveUp2 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveUp3 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveUp4 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveUp5 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveUp6 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveUp7 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveUp8 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveUp9 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveUp10 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveUp11 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveUp12 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveUp13 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveUp14 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveUp15 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveUp16 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes goBack0 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes goBack1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes goBack2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes goBack3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes goBack4 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes goBack5 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes goBack6 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes goBack {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes goBack7 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes goBack8 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes goBack9 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes goBack10 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes goBack11 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes goBack12 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes goBack13 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes goBack14 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 .go-back {
@@ -524,4 +857,18 @@ footer {
 #race-again {
   height: 100px;
   width: 200px;
+}
+
+/* Styling for both race tracks above */
+
+#sr-main {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+}
+
+/* Styling for single-race.html above */
+
+#tc-main {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
 }

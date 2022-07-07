@@ -6,9 +6,9 @@ const horses = {}
 class Horse {
   constructor(name) {
     this.name = name
-    this.flipCount = null
-    this.wagerAmount = null
-    this.tcWagerAmount = null
+    this.flipCount = 0
+    this.wagerAmount = 0
+    this.tcWagerAmount = 0
     this.winCount = null
   }
   addWager() {

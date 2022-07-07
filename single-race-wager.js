@@ -7,7 +7,7 @@ class Horse {
   constructor(name) {
     this.name = name
     this.flipCount = 0
-    this.wagerAmount = null
+    this.wagerAmount = 0
   }
   addWager() {
     this.wagerAmount += wager
