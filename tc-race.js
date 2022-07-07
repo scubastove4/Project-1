@@ -8,9 +8,10 @@ const wagerDisplay = document.querySelector('#wager-pool')
 const goBacks = document.querySelectorAll('.go-back')
 let goBackCount = 1
 let autoRun
-const preakness = document.querySelector('#preakness')
-const belmont = document.querySelector('#belmont')
+// const preakness = document.querySelector('#preakness')
+// const belmont = document.querySelector('#belmont')
 const raceAgain = document.querySelector('#race-again')
+const raAnchorTag = document.querySelector('.race-again')
 
 ///////////   Globals above //////////////
 
@@ -178,11 +179,14 @@ const payout = () => {
           console.log(winners)
         }
       })
-      wagerDisplay.innerText = `No Triple Crown today :( but ${winners[0]}, ${
+      announcements.style.fontSize = '2rem'
+      announcements.innerText = `No Triple Crown today... but ${winners[0]}, ${
         winners[1]
       }, ${
         winners[2]
-      } split the series and backers take home $${+splitThree.toFixed(2)} each!`
+      } split the series and backers take home ${+splitThree.toFixed(
+        2
+      )} points each!`
       winners = []
       break
     case 2:
@@ -201,12 +205,13 @@ const payout = () => {
       })
       let bigPurse = Math.round(pool * 0.66)
       let smallPurse = Math.round(pool * 0.33)
-      wagerDisplay.innerText = `Close but no cigar! With 2 wins ${
+      announcements.style.fontSize = '2rem'
+      announcements.innerText = `Close but no cigar! With 2 wins ${
         winners[0]
         // need to add decimal limitations!
-      } backers take home $${bigPurse}, and with 1 win ${
+      } backers take home ${bigPurse} points, and with 1 win ${
         winners[1]
-      } backers take home $${smallPurse}!`
+      } backers take home ${smallPurse} points!`
       winners = []
       break
     case 1:
@@ -217,7 +222,8 @@ const payout = () => {
           console.log(winners)
         }
       })
-      wagerDisplay.innerText = `Hold on to your butts! ${winners[0]} HAS WON THE TRIPLE CROWN! Backers take home ${pool}!`
+      announcements.style.fontSize = '2rem'
+      announcements.innerText = `Hold on to your butts! ${winners[0]} HAS WON THE TRIPLE CROWN! Backers take home ${pool} points!`
   }
 }
 
@@ -237,20 +243,26 @@ const checkWinner = (raceWinner) => {
       return accumulator + value
     }, 0)
     if (leg === 1) {
-      wagerDisplay.innerText =
+      announcements.innerText =
         horses[`${raceWinner}`].name + ` wins The Kentucky Derby!`
-      preakness.style.display = 'initial'
+      raceAgain.style.display = 'initial'
+      raAnchorTag.setAttribute('href', '#')
+      raceAgain.innerText = 'Next leg: The Preakness'
       totalWins = []
       return
     } else if (leg === 2) {
-      wagerDisplay.innerText =
+      announcements.innerText =
         horses[`${raceWinner}`].name + ` wins The Preakness!`
-      belmont.style.display = 'initial'
+      raceAgain.style.display = 'initial'
+      raAnchorTag.setAttribute('href', '#')
+      raceAgain.innerText = 'Final leg: The Belmont Stakes'
       totalWins = []
       return
     } else if (leg === 3) {
       payout()
       raceAgain.style.display = 'initial'
+      raAnchorTag.style.display = 'initial'
+      raAnchorTag.setAttribute('href', 'tc-wager.html')
     }
   }
 }
@@ -290,9 +302,10 @@ const nextRace = (e) => {
     horses[`${horse}`].flipCount = null
   })
   e.target.style.display = 'none'
+  raAnchorTag.style.display = 'none'
   goBackCount = 1
   let pool = poolWagers()
-  wagerDisplay.innerText = `Up for Grabs: $${pool}`
+  wagerDisplay.innerText = `Up for Grabs: ${pool}`
   deck.addEventListener('click', autoRunFunction)
   goBacks.forEach((goBack) => {
     goBack.innerText = ''
@@ -320,8 +333,8 @@ const nextRace = (e) => {
 window.addEventListener('load', () => {
   createHorse()
   poolWagers()
-  preakness.style.display = 'none'
-  belmont.style.display = 'none'
+  // preakness.style.display = 'none'
+  // belmont.style.display = 'none'
   raceAgain.style.display = 'none'
   track.style.gridTemplateRows = `repeat(${Object.keys(horses).length + 1}, 1fr`
   goBacks.forEach((goBack) => {
@@ -334,5 +347,6 @@ deck.addEventListener('click', autoRunFunction)
 
 // Sound for race start https://www.audiomicro.com/start-of-horse-race-sports-games-start-of-horse-race-sound-effects-44772
 
-preakness.addEventListener('click', nextRace)
-belmont.addEventListener('click', nextRace)
+// preakness.addEventListener('click', nextRace)
+// belmont.addEventListener('click', nextRace)
+raceAgain.addEventListener('click', nextRace)
