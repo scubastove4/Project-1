@@ -99,8 +99,9 @@ document.addEventListener('click', (e) => {
     horses[`${e.target.id}`].addWager()
     e.target.innerText =
       horses[`${e.target.id}`].name +
-      ' $' +
-      horses[`${e.target.id}`].wagerAmount
+      ' ' +
+      horses[`${e.target.id}`].wagerAmount +
+      ' pts'
   }
 })
 

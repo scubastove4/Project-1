@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script defer src="tc-race-2.js"></script>
+    <script defer src="tc-race-1.js"></script>
     <title>Kentucky Derby</title>
   </head>
   <body>
+    <header id="tc-header"></header>
     <main id="tc-main">
       <div class="go-back" id="gb1"></div>
       <div class="go-back" id="gb2"></div>
@@ -19,11 +20,14 @@
       <div class="go-back" id="gb7"></div>
     </main>
     <footer>
-      <div id="card-deck">Draw from Here</div>
+      <audio>
+        <source src="horse-race-start-sound.mp3" type="audio/mpeg" />
+      </audio>
+      <div id="card-deck"></div>
       <div id="wager-pool"></div>
       <button id="preakness">Next leg: The Preakness</button>
       <button id="belmont">Final leg: The Belmont Stakes</button>
-      <a href="tc-wager-2.html"><button id="race-again">Race Again</button></a>
+      <a href="tc-wager-1.html"><button id="race-again">Race Again</button></a>
       <div id="discard"></div>
     </footer>
   </body>

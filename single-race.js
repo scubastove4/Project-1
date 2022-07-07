@@ -40,7 +40,7 @@ const poolWagers = () => {
     .reduce((accumulator, value) => {
       return accumulator + value
     }, 0)
-  wagerDisplay.innerText = `Up for Grabs: $${parseInt(allWagers, 10)}`
+  wagerDisplay.innerText = `Up for Grabs: ${parseInt(allWagers, 10)} points!`
   return parseInt(allWagers, 10)
 }
 

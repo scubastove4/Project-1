@@ -2,7 +2,12 @@
   src: url(Fonts/Royalacid.ttf);
   font-family: royal;
 
-  /* Font source https://www.urbanfonts.com/fonts/Royal_Acid.htm */
+  /* Royal Acid source https://www.urbanfonts.com/fonts/Royal_Acid.htm */
+}
+@font-face {
+  src: url(American-Purpose-Casual-02.ttf);
+  font-family: purpose;
+  /*American Purpose Casual source https://maxfonts.com/fonts/a/american-purpose-casual.font */
 }
 
 /* Help on importing fonts https://youtu.be/Hwq_Mr12bcI?t=369 */
@@ -38,13 +43,14 @@ h2 {
 }
 
 #index-h1 {
-  font-size: 2.75rem;
-  color: #f8f9ef;
+  font-size: 5rem;
+  color: #c9b88d;
   margin-bottom: 20%;
   margin-top: 3%;
   letter-spacing: 2px;
-  -webkit-text-stroke-color: #4a4653;
-  -webkit-text-stroke-width: 2px;
+  text-shadow: 3px 3px 3px #3c1008, -1px -1px 1px #f9e58e;
+  /* -webkit-text-stroke-color: #4a4653;
+  -webkit-text-stroke-width: 2px; */
 
   /* Help with text outline https://www.codesdope.com/blog/article/adding-outline-to-text-using-css/ */
 }
@@ -70,7 +76,7 @@ h2 {
   border: none;
   border-radius: 5px;
   font-size: 1rem;
-  height: fit-content;
+  height: fit-content; /*add media query to up this to 50% at bigger sizes, or scale up text*/
   color: #4a4653;
 }
 
@@ -303,6 +309,7 @@ input {
   background-color: #736f78;
   color: #f8f9ef;
   box-shadow: 2px 1px 5px 1px #4a4653, -0.5px -0.5px 3px 1px #f6f7eb;
+  font-family: purpose;
 }
 
 /* Help for box-shadow https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
@@ -321,7 +328,13 @@ input {
   cursor: pointer;
 }
 
-/* Styling above for single-race-wager.html and tc-wager-1.js*/
+/* ----------------------------------Styling above for single-race-wager.html and tc-wager-1.js ------------------*/
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: purpose;
+}
 
 #horse0 {
   grid-row-start: 1;
@@ -853,6 +866,7 @@ input {
 .info {
   grid-column-start: 1;
   grid-column-end: span 1;
+  place-self: center;
 }
 
 .horse {
@@ -860,7 +874,6 @@ input {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  /* font-size: 12px; */
   grid-column-end: span 1;
   grid-row-end: span 1;
 }
@@ -903,4 +916,9 @@ footer {
 #tc-main {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
+}
+
+#tc-header {
+  align-self: center;
+  font-size: 2.75rem;
 }
