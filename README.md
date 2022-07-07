@@ -63,3 +63,7 @@ On the next screen your horses will be assigned a lane based on the order they q
 | [DuckDuckGo Kentucky Derby](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.covers.com%2Fcms%2Fcovers%2Fba2c2dec-b1cd-4104-931c-337f4df39e09.jpg&f=1&nofb=1) | [Event Listener Delegation](https://youtu.be/XF1_MlZ5l6M?t=803)                                    |
 |                                                                                                                                                                              | [Session Storage Use 1](https://youtu.be/0eV-tf-W2rQ?t=320)                                        |
 |                                                                                                                                                                              | [Session Storage Use 2](https://www.javaguides.net/2019/05/javascript-sessionstorage-methods.html) |
+
+<!-- Add this image for front side of card https://media.istockphoto.com/photos/blank-playing-card-on-a-white-background-picture-id182393154?k=6&m=182393154&s=170667a&w=0&h=c2mrUWET1N7kWWio7wS3Xe4N2GpsMXIZpk2ZZkFRXPg= -->
+
+<!-- And this for back of card https://www.vippng.com/preview/iwTTwww_circle/ -->

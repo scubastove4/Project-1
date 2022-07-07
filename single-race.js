@@ -1,5 +1,5 @@
 const horses = JSON.parse(sessionStorage.getItem('HORSES'))
-const track = document.querySelector('main')
+const track = document.querySelector('#sr-main')
 const deck = document.querySelector('#card-deck')
 const discard = document.querySelector('#discard')
 const cardChoices = Object.keys(horses)
@@ -13,17 +13,18 @@ const raceAgain = document.querySelector('#race-again')
 
 const createHorse = () => {
   Object.keys(horses).forEach((horse, index) => {
-    const newDivWager = document.createElement('div')
-    track.appendChild(newDivWager)
-    newDivWager.classList.add(`horse${index}`)
-    newDivWager.classList.add('size')
-    newDivWager.innerText =
-      horses[`${horse}`].name + ': ' + horses[`${horse}`].wagerAmount
     const newDivHorse = document.createElement('div')
     track.appendChild(newDivHorse)
+    newDivHorse.classList.add('horse')
     newDivHorse.classList.add('post')
     newDivHorse.classList.add('size')
+    newDivHorse.style.animationName = 'rotate'
     newDivHorse.id = `horse${index}`
+    const horseSpan = document.createElement('span')
+    newDivHorse.appendChild(horseSpan)
+    horseSpan.classList.add('spans')
+    horseSpan.innerText =
+      horses[`${horse}`].name + ': ' + horses[`${horse}`].wagerAmount
   })
   sessionStorage.clear()
 }
@@ -304,7 +305,9 @@ window.addEventListener('load', () => {
   createHorse()
   poolWagers()
   raceAgain.style.display = 'none'
-  track.style.gridTemplateRows = `repeat(${Object.keys(horses).length + 1}, 1fr`
+  track.style.gridTemplateRows = `repeat(${
+    Object.keys(horses).length + 1
+  }, 1fr), 2fr`
   goBacks.forEach((goBack) => {
     goBack.style.gridRowStart = `${Object.keys(horses).length + 1}`
   })
