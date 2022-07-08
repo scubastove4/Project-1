@@ -71,7 +71,6 @@ h2 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: 2% 0 2% 0;
   height: 10%;
 }
@@ -83,11 +82,12 @@ h2 {
 #index-sr,
 #index-tc {
   background-color: #988768;
-  padding: 5px;
+  padding: 4%;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
   color: #4a4653;
+  height: max-content;
 }
 
 #index-sr {
@@ -96,12 +96,14 @@ h2 {
 }
 
 #index-tc {
+  padding: 2.8%;
   margin-left: 20%;
   box-shadow: 2px 2px 5px 1px #5c442a, -0.8px -0.8px 3px 1px #c9b88d;
 }
 
 #index-sr,
 #index-tc,
+#index-buttons,
 .index-buttons {
   width: max-content;
 }
@@ -1477,5 +1479,13 @@ footer {
   #discard {
     height: 4em;
     width: 3em;
+  }
+}
+
+@media (min-height: 800px) {
+  #index-sr,
+  #index-tc {
+    font-size: 2.5rem;
+    height: max-content;
   }
 }

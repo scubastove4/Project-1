@@ -1,0 +1,13 @@
+@media (max-width: 1700px) {
+  .horse,
+  .go-back {
+    height: 3em;
+    width: 4em;
+  }
+
+  #card-deck,
+  #discard {
+    height: 4em;
+    width: 3em;
+  }
+}
