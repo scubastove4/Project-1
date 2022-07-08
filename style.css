@@ -340,6 +340,9 @@ input {
   background: -webkit-linear-gradient(#04e762, #ffa723 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Help with text gradient https://cssgradient.io/blog/css-gradient-text/ */
@@ -377,41 +380,57 @@ header,
 #horse0 {
   grid-row-start: 1;
   grid-row-end: span 1;
+  color: #353535;
 }
 
 #horse1 {
   grid-row-start: 2;
   grid-row-end: span 1;
+  color: #a4161a;
 }
 
 #horse2 {
   grid-row-start: 3;
   grid-row-end: span 1;
+  color: #353535;
 }
 
 #horse3 {
   grid-row-start: 4;
   grid-row-end: span 1;
+  color: #a4161a;
 }
 
 #horse4 {
   grid-row-start: 5;
   grid-row-end: span 1;
+  color: #353535;
 }
 
 #horse5 {
   grid-row-start: 6;
   grid-row-end: span 1;
+  color: #a4161a;
 }
 
 #horse6 {
   grid-row-start: 7;
   grid-row-end: span 1;
+  color: #353535;
 }
 
 #horse7 {
   grid-row-start: 8;
   grid-row-end: span 1;
+  color: #a4161a;
+}
+
+.color0 {
+  color: #353535;
+}
+
+.color1 {
+  color: #a4161a;
 }
 
 .post {
@@ -880,9 +899,10 @@ header,
   justify-content: center;
   align-items: center;
 
-  height: 40%;
-  min-width: 80%;
-  border-radius: 9px;
+  height: 3em;
+  width: 4em;
+  border-radius: 0.5em;
+  writing-mode: vertical-lr;
 }
 
 .horse {
@@ -930,8 +950,11 @@ footer {
   grid-column-end: span 1;
   grid-row-end: span 2;
 
-  height: 70%;
-  width: 30%;
+  height: 4em;
+  width: 3em;
+  border-radius: 0.5em;
+  /* height: 70%;
+  width: 30%; */
 }
 
 #discard {
@@ -946,9 +969,12 @@ footer {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  min-height: 70%;
+  height: 4em;
+  width: 3em;
+  border-radius: 0.5em;
+  /* min-height: 70%;
   width: 23%;
-  border-radius: 8px;
+  border-radius: 8px; */
 }
 
 #wager-pool {

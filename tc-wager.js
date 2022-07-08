@@ -107,7 +107,7 @@ document.addEventListener('click', (e) => {
     horses[`${e.target.id}`].tcAddWager()
     e.target.innerText =
       horses[`${e.target.id}`].name +
-      ' ' +
+      ': ' +
       horses[`${e.target.id}`].tcWagerAmount +
       ' pts'
   }
