@@ -10,9 +10,9 @@
 
 ## **_Description_**
 
-![Kentucky_Derby](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.covers.com%2Fcms%2Fcovers%2Fba2c2dec-b1cd-4104-931c-337f4df39e09.jpg&f=1&nofb=1)
+![Triple_Crown](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fucd.kaplan.com.sg%2Fwp-content%2Fuploads%2F2017%2F08%2Ftriple-crown-glory.jpg&f=1&nofb=1)
 
-This project brings the world's most famous horse race right to your ~~table~~ desktop. A series of card flips will determine who will bring home the Garland of Roses... and more importantly the "money."
+This project brings the world's most famous horse race series right to your ~~table~~ desktop. A series of card flips will determine if you can win the Triple Crown... and more importantly the "money."
 
 ---
 
@@ -27,23 +27,25 @@ This project brings the world's most famous horse race right to your ~~table~~ d
 
 ## **_Getting Started_**
 
-As you enter "Churchill Downs," you first pass by the stables, where you get to see (set) the horses who will be racing. There are 8 posts, so up to 8 horses can race at once. Upon determining who will be racing, head right next door to the betting kiosk. There you can determine how many points you and your friends would like to wager on each horse. When you are all satisfied with your wagers, send the ponies to the posts!
+At the homepage you get to decide whether you would like to run a single race, or if you would like to test your luck and race for the Triple Crown.
 
-On the next screen your horses will be assigned a lane based on the order they qualified for the race. Click the deck of cards on the bottom left; a number that corresponds with a horse will be randomly selected. Whichever horse matches that number wil move forward 1 length. Whoever makes it 8 lengths first is the winner, and whoever placed their wagers on that horse collects all of the losers points!
+After making your decision, head on over to "DraftQueens SportsBook" (sadly no affiliation with Draftkings) where you get to see (set) the horses who will be racing. There are 8 posts, so up to 8 horses can race at once. Once you figure out who's racing, place your bets! When you are all satisfied with your wagers, send the ponies to the posts!
+
+On the next screen your horses will be assigned a lane based on the order they "qualified" for the race. Click the deck of cards on the bottom left; a number that corresponds with a horse will be randomly selected. Whichever horse matches that number wil move forward 1 length. After all horses have passed the first length, the length card is flipped, and the unlucky horse that matches that card drops back a pace. And don't worry, after that first click on each page, you get to sit back and watch the horses run!
+
+If you're watching a sinlge race, whoever makes it 16 lengths first is the winner, and whoever placed their wagers on that horse collects all of the losers' points! If you dared to run the Triple Crown, there are 3 races. Each lasts 8 lengths. At the end, the pot is split by whichever horses win!
 
 ## **_Screenshots (Better Images Pending)_**
 
 ### Qualifying Horses & Making Wagers
 
-![Enter_Horse_Names](Enter-Horse-Name.png)
-![Wagers_Plus_Horse_Names](Wagers-Plus-Created-Horses.png)
-![Send_horses_to_posts](Send-horses-to-posts.png)
+![Enter_Horse_Names](Enter-horses-and-wagers.png)
 
 ### Time to Race!
 
-![Start_of_Race](Start-of-Race.png)
-![Mid-Race](Mid-Race.png)
-![End-of-Race](End-of-Race.png)
+![Start_of_Race](Start-of-race.png)
+![Mid-Race](Mid-race.png)
+![End-of-Race](End-of-race.png)
 
 ---
 
