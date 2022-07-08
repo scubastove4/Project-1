@@ -39,13 +39,13 @@ If you're watching a sinlge race, whoever makes it 16 lengths first is the winne
 
 ### Qualifying Horses & Making Wagers
 
-![Enter_Horse_Names](Enter-horses-and-wagers.png)
+![Enter_Horse_Names](pics-and-audio/Enter-horses-and-wagers.png)
 
 ### Time to Race!
 
-![Start_of_Race](Start-of-race.png)
-![Mid-Race](Mid-race.png)
-![End-of-Race](End-of-race.png)
+![Start_of_Race](pics-and-audio/Start-of-race.png)
+![Mid-Race](pics-and-audio/Mid-race.png)
+![End-of-Race](pics-and-audio/End-of-race.png)
 
 ---
 

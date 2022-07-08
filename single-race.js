@@ -66,7 +66,8 @@ const renderRandomGoBackHorse = () => {
         'goBack' + horses[`${randomGoBackHorse}`].flipCount
       let goBackText = document.getElementById(`gb${goBackCount}`)
       goBackText.innerText = `${index + 1}`
-      goBackText.style.backgroundImage = 'url(90-front-of-playing-card.png)'
+      goBackText.style.backgroundImage =
+        'url(pics-and-audio/90-front-of-playing-card.png)'
       if (index % 2 === 0) {
         goBackText.classList.remove('color1')
         goBackText.classList.add('color0')
@@ -287,7 +288,8 @@ const moveHorse = () => {
         'spot' + (horses[`${randomHorse}`].flipCount - 1)
       )
       addClass.classList.add('spot' + horses[`${randomHorse}`].flipCount)
-      discard.style.backgroundImage = 'url(front-of-playing-card.png)'
+      discard.style.backgroundImage =
+        'url(pics-and-audio/front-of-playing-card.png)'
       discard.innerText = `${index + 1}`
       if (index % 2 === 0) {
         discard.classList.remove('color1')

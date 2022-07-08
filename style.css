@@ -21,7 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: purpose;
-  background-image: url(tim-mossholder-ysDq0fY-bzo-unsplash.png);
+  background-image: url(pics-and-audio/tim-mossholder-ysDq0fY-bzo-unsplash.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -873,7 +873,7 @@ header,
 .go-back,
 #card-deck {
   border-radius: 5px;
-  background-image: url(vippng.com-joker-playing-card-png-2814596.png);
+  background-image: url(pics-and-audio/vippng.com-joker-playing-card-png-2814596.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -883,7 +883,7 @@ header,
   grid-row-end: span 1;
   order: 9;
 
-  background-image: url(90-vippng.com-joker-playing-card.png);
+  background-image: url(pics-and-audio/90-vippng.com-joker-playing-card.png);
   height: 1em;
 }
 
@@ -901,7 +901,7 @@ header,
   grid-column-end: span 1;
   grid-row-end: span 1;
 
-  background-image: url(90-front-of-playing-card.png);
+  background-image: url(pics-and-audio/90-front-of-playing-card.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
