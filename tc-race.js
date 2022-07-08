@@ -11,6 +11,7 @@ let autoRun
 // const preakness = document.querySelector('#preakness')
 // const belmont = document.querySelector('#belmont')
 const raceAgain = document.querySelector('#race-again')
+const raInnerText = document.querySelector('span')
 const raAnchorTag = document.querySelector('.race-again')
 
 ///////////   Globals above //////////////
@@ -247,7 +248,7 @@ const checkWinner = (raceWinner) => {
         horses[`${raceWinner}`].name + ` wins The Kentucky Derby!`
       raceAgain.style.display = 'initial'
       raAnchorTag.setAttribute('href', '#')
-      raceAgain.innerText = 'Next leg: The Preakness'
+      raInnerText.innerText = 'Next leg: The Preakness'
       totalWins = []
       return
     } else if (leg === 2) {
@@ -255,7 +256,7 @@ const checkWinner = (raceWinner) => {
         horses[`${raceWinner}`].name + ` wins The Preakness!`
       raceAgain.style.display = 'initial'
       raAnchorTag.setAttribute('href', '#')
-      raceAgain.innerText = 'Final leg: The Belmont Stakes'
+      raInnerText.innerText = 'Final leg: The Belmont Stakes'
       totalWins = []
       return
     } else if (leg === 3) {
