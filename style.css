@@ -87,7 +87,6 @@ h2 {
   border: none;
   border-radius: 5px;
   font-size: 1rem;
-  /*add media query to up this to 50% at bigger sizes, or scale up text*/
   color: #4a4653;
 }
 
@@ -953,8 +952,6 @@ footer {
   height: 4em;
   width: 3em;
   border-radius: 0.5em;
-  /* height: 70%;
-  width: 30%; */
 }
 
 #discard {
@@ -972,9 +969,6 @@ footer {
   height: 4em;
   width: 3em;
   border-radius: 0.5em;
-  /* min-height: 70%;
-  width: 23%;
-  border-radius: 8px; */
 }
 
 #wager-pool {

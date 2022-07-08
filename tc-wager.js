@@ -20,7 +20,7 @@ class Horse {
     tcEmptyWager()
   }
 }
-////// Horse above
+//////////   Horse above  ///////////
 
 const tcOneDollar = document.querySelector('#tc-one-dollar')
 const tcFiveDollars = document.querySelector('#tc-five-dollars')
@@ -34,12 +34,11 @@ const tcWagerAmounts = {
   ten: 10,
   custom: null
 }
-////// Wagers above
+//////////   Wagers above  ///////////
 
 const post = document.querySelector('#post')
-////// Move to next page above
 
-///////////   Globals above //////////////
+///////////   Globals (by type) above //////////////
 
 const horseMinumum = () => {
   if (Object.keys(horses).length < 2) {
@@ -83,7 +82,7 @@ const tcEmptyWager = () => {
   tcWagerAmounts.custom = null
 }
 
-///////////   Function above //////////////
+///////////   Functions above //////////////
 
 forAddHorse.addEventListener('click', addHorses)
 

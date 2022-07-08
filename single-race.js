@@ -321,7 +321,7 @@ const autoRunFunction = () => {
 
 // Help for setInterval https://youtu.be/GhePFBkdNYk
 
-///////////   Function above //////////////
+///////////   Functions above //////////////
 
 window.addEventListener('load', () => {
   createHorse()

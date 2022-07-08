@@ -14,7 +14,7 @@ class Horse {
     emptyWager()
   }
 }
-////// Horse above
+//////////   Horse above  ///////////
 
 const oneDollar = document.querySelector('#one-dollar')
 const fiveDollars = document.querySelector('#five-dollars')
@@ -28,12 +28,11 @@ const wagerAmounts = {
   ten: 10,
   custom: null
 }
-////// Wagers above
+//////////   Wagers above  ///////////
 
 const post = document.querySelector('#post')
-////// Move to next page above
 
-///////////   Globals above //////////////
+///////////   Globals (by type) above //////////////
 
 const horseMinumum = () => {
   if (Object.keys(horses).length < 2) {
@@ -75,7 +74,7 @@ const emptyWager = () => {
   wagerAmounts.custom = null
 }
 
-///////////   Function above //////////////
+///////////   Functions above //////////////
 
 forAddHorse.addEventListener('click', addHorses)
 

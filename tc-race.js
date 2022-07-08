@@ -8,8 +8,6 @@ const wagerDisplay = document.querySelector('#wager-pool')
 const goBacks = document.querySelectorAll('.go-back')
 let goBackCount = 1
 let autoRun
-// const preakness = document.querySelector('#preakness')
-// const belmont = document.querySelector('#belmont')
 const raceAgain = document.querySelector('#race-again')
 const raInnerText = document.querySelector('span')
 const raAnchorTag = document.querySelector('.race-again')
@@ -214,12 +212,7 @@ const payout = () => {
       let bigPurse = Math.round(pool * 0.66)
       let smallPurse = Math.round(pool * 0.33)
       announcements.style.fontSize = '2rem'
-      announcements.innerText = `Close but no cigar! With 2 wins ${
-        winners[0]
-        // need to add decimal limitations!
-      } backers take home ${bigPurse} points, and with 1 win ${
-        winners[1]
-      } backers take home ${smallPurse} points!`
+      announcements.innerText = `Close but no cigar! With 2 wins ${winners[0]} backers take home ${bigPurse} points, and with 1 win ${winners[1]} backers take home ${smallPurse} points!`
       winners = []
       break
     case 1:
@@ -348,8 +341,6 @@ const nextRace = (e) => {
 window.addEventListener('load', () => {
   createHorse()
   poolWagers()
-  // preakness.style.display = 'none'
-  // belmont.style.display = 'none'
   raceAgain.style.display = 'none'
   track.style.gridTemplateRows = `repeat(${Object.keys(horses).length + 1}, 1fr`
   goBacks.forEach((goBack) => {
@@ -362,6 +353,4 @@ deck.addEventListener('click', autoRunFunction)
 
 // Sound for race start https://www.audiomicro.com/start-of-horse-race-sports-games-start-of-horse-race-sound-effects-44772
 
-// preakness.addEventListener('click', nextRace)
-// belmont.addEventListener('click', nextRace)
 raceAgain.addEventListener('click', nextRace)
