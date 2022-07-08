@@ -9,7 +9,6 @@ const goBacks = document.querySelectorAll('.go-back')
 let goBackCount = 1
 let autoRun
 const raceAgain = document.querySelector('#race-again')
-const raInnerText = document.querySelector('span')
 
 ///////////   Globals above //////////////
 

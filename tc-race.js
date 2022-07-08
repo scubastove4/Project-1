@@ -9,7 +9,6 @@ const goBacks = document.querySelectorAll('.go-back')
 let goBackCount = 1
 let autoRun
 const raceAgain = document.querySelector('#race-again')
-const raInnerText = document.querySelector('span')
 const raAnchorTag = document.querySelector('.race-again')
 
 ///////////   Globals above //////////////
@@ -247,21 +246,24 @@ const checkWinner = (raceWinner) => {
       announcements.innerText =
         horses[`${raceWinner}`].name + ` wins The Kentucky Derby!`
       raceAgain.style.display = 'initial'
+      raceAgain.innerText = 'Next leg: The Preakness'
+      raAnchorTag.style.display = 'initial'
       raAnchorTag.setAttribute('href', '#')
-      raInnerText.innerText = 'Next leg: The Preakness'
       totalWins = []
       return
     } else if (leg === 2) {
       announcements.innerText =
         horses[`${raceWinner}`].name + ` wins The Preakness!`
       raceAgain.style.display = 'initial'
+      raceAgain.innerText = 'Final leg: The Belmont Stakes'
+      raAnchorTag.style.display = 'initial'
       raAnchorTag.setAttribute('href', '#')
-      raInnerText.innerText = 'Final leg: The Belmont Stakes'
       totalWins = []
       return
     } else if (leg === 3) {
       payout()
       raceAgain.style.display = 'initial'
+      raceAgain.innerText = 'Race Again'
       raAnchorTag.style.display = 'initial'
       raAnchorTag.setAttribute('href', 'tc-wager.html')
     }
@@ -310,7 +312,7 @@ const nextRace = (e) => {
     horses[`${horse}`].flipCount = null
   })
   e.target.style.display = 'none'
-  raAnchorTag.style.display = 'none'
+  raceAgain.style.display = 'none'
   goBackCount = 1
   let pool = poolWagers()
   wagerDisplay.innerText = `Up for Grabs: ${pool}`

@@ -366,7 +366,7 @@ header {
   align-self: center;
 
   padding-top: 0.5%;
-  height: 10%;
+  height: 7%;
   font-size: 2.75rem;
 }
 
@@ -939,7 +939,7 @@ footer {
   align-items: center;
   justify-items: center;
 
-  height: 15%;
+  height: 18%;
   width: 100%;
   margin-bottom: 1%;
 }
@@ -981,13 +981,12 @@ footer {
 
 .race-again {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
 
   grid-column-start: 2;
   grid-column-end: span 1;
   grid-row-start: 2;
-  align-self: center;
 
   height: 100%;
   width: 100%;
@@ -995,6 +994,7 @@ footer {
 
 #race-again {
   height: 100%;
+  width: max-content;
   padding: 1% 3%;
   font-size: 2.5rem;
   font-family: purpose;
@@ -1040,4 +1040,36 @@ footer {
   align-items: center;
 
   height: 75%;
+}
+
+@media (min-width: 1700px) {
+  .horse,
+  .go-back {
+    height: 5em;
+    width: 6em;
+    writing-mode: vertical-lr;
+  }
+
+  .horse {
+    border-radius: 1em;
+  }
+
+  #card-deck,
+  #discard {
+    height: 6em;
+    width: 5em;
+    border-radius: 0.5em;
+  }
+
+  header {
+    font-size: 4rem;
+  }
+
+  #wager-pool {
+    font-size: 2.5rem;
+  }
+
+  #race-again {
+    font-size: 3.5rem;
+  }
 }
