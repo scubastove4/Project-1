@@ -1,13 +1,10 @@
 @font-face {
   src: url(Fonts/Royalacid.ttf);
   font-family: royal;
-
-  /* Royal Acid source https://www.urbanfonts.com/fonts/Royal_Acid.htm */
 }
 @font-face {
   src: url(Fonts/American-Purpose-Casual-02.ttf);
   font-family: purpose;
-  /*American Purpose Casual source https://maxfonts.com/fonts/a/american-purpose-casual.font */
 }
 
 /* Help on importing fonts https://youtu.be/Hwq_Mr12bcI?t=369 */
@@ -28,8 +25,6 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
-  /* Pic from Unsplash https://unsplash.com/photos/ysDq0fY-bzo */
 }
 
 a {
@@ -1027,7 +1022,7 @@ footer {
   height: 75%;
 }
 
-/* Styling for single-race.html above */
+/* ---------------------------------Styling for single-race.html above-------------------------------- */
 
 #tc-main {
   display: grid;

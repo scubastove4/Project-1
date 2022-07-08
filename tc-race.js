@@ -356,6 +356,4 @@ window.addEventListener('load', () => {
 
 deck.addEventListener('click', autoRunFunction)
 
-// Sound for race start https://www.audiomicro.com/start-of-horse-race-sports-games-start-of-horse-race-sound-effects-44772
-
 raceAgain.addEventListener('click', nextRace)
