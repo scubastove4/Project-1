@@ -50,12 +50,6 @@ const renderRandomHorse = () => {
   return card
 }
 
-const payout = (winningHorse) => {
-  let pool = poolWagers()
-  let winnersWager = parseInt(horses[`${winningHorse}`].wagerAmount, 10)
-  return pool - winnersWager
-}
-
 const renderRandomGoBackHorse = () => {
   let randomGoBackHorse = renderRandomHorse()
   Object.keys(horses).forEach((horse, index) => {
@@ -275,7 +269,7 @@ const checkWinner = (horse) => {
   if (horses[`${horse}`].flipCount === 16) {
     deck.removeEventListener('click', autoRunFunction)
     clearInterval(autoRun)
-    let winnerPayout = payout(horse)
+    let winnerPayout = poolWagers()
     announcements.innerText =
       horses[`${horse}`].name + ` wins! Backers collect ${winnerPayout} points!`
     raceAgain.style.display = 'initial'
