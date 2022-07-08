@@ -168,23 +168,31 @@ const goBackSpot = () => {
   }
 }
 
+const media1700 = (windowSize) => {
+  if (windowSize.matches) {
+    announcements.style.fontSize = '3rem'
+  } else {
+    announcements.style.fontSize = '2rem'
+  }
+}
+// Media query in JS help https://www.w3schools.com/howto/howto_js_media_queries.asp
+
 const payout = () => {
   let pool = poolWagers()
   let winners = []
   let winnersCounts = Object.keys(horses).filter((horse) => {
     return horses[`${horse}`].winCount >= 1
   })
+  let wind1700 = window.matchMedia('(min-width: 1700px)')
   switch (winnersCounts.length) {
     case 3:
-      console.log(winnersCounts)
       let splitThree = pool / 3
       Object.keys(horses).forEach((horse) => {
         if (horses[`${horse}`].winCount === 1) {
           winners.push(horses[`${horse}`].name)
-          console.log(winners)
         }
       })
-      announcements.style.fontSize = '2rem'
+      media1700(wind1700)
       announcements.innerText = `No Triple Crown today... but ${winners[0]}, ${
         winners[1]
       }, ${
@@ -195,34 +203,29 @@ const payout = () => {
       winners = []
       break
     case 2:
-      console.log(winnersCounts)
       Object.keys(horses).forEach((horse) => {
         if (horses[`${horse}`].winCount === 2) {
           winners.push(horses[`${horse}`].name)
-          console.log(winners)
         }
       })
       Object.keys(horses).forEach((horse) => {
         if (horses[`${horse}`].winCount === 1) {
           winners.push(horses[`${horse}`].name)
-          console.log(winners)
         }
       })
       let bigPurse = Math.round(pool * 0.66)
       let smallPurse = Math.round(pool * 0.33)
-      announcements.style.fontSize = '2rem'
+      media1700(wind1700)
       announcements.innerText = `Close but no cigar! With 2 wins ${winners[0]} backers take home ${bigPurse} points, and with 1 win ${winners[1]} backers take home ${smallPurse} points!`
       winners = []
       break
     case 1:
-      console.log(winnersCounts)
       Object.keys(horses).forEach((horse) => {
         if (horses[`${horse}`].winCount === 3) {
           winners.push(horses[`${horse}`].name)
-          console.log(winners)
         }
       })
-      announcements.style.fontSize = '2rem'
+      media1700(wind1700)
       announcements.innerText = `Hold on to your butts! ${winners[0]} HAS WON THE TRIPLE CROWN! Backers take home ${pool} points!`
   }
 }

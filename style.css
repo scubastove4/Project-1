@@ -118,7 +118,7 @@ h2 {
 }
 
 .crown {
-  font-size: 3rem;
+  font-size: 5rem;
   color: #04e762;
   grid-column-end: span 1;
   grid-row-start: 1;
@@ -226,6 +226,7 @@ h2 {
 #horse-buttons {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: max-content;
   width: 100%;
 }
@@ -245,11 +246,15 @@ input {
 }
 
 #for-add-horse,
+#one-dollar,
+#five-dollars,
+#ten-dollars,
 #for-custom-wager,
+#tc-one-dollar,
+#tc-five-dollars,
+#tc-ten-dollars,
 #tc-for-custom-wager,
-.choose-horse,
-.to-post,
-.tc-to-post {
+.choose-horse {
   font-size: 1rem;
 }
 
@@ -263,20 +268,6 @@ input {
   margin: 0 1%;
 }
 
-.to-post {
-  width: 20%;
-}
-
-.tc-to-post {
-  width: 25%;
-}
-
-#post {
-  height: max-content;
-  width: 100%;
-  font-size: 1rem;
-}
-
 .add-horse,
 .choose-wager,
 #horse-buttons {
@@ -287,9 +278,12 @@ input {
 .tc-to-post {
   display: flex;
   justify-content: center;
+  flex-wrap: nowrap;
 
   margin-top: 1%;
   height: max-content;
+  width: max-content;
+  text-align: center;
 }
 
 #for-add-horse,
@@ -314,6 +308,8 @@ input {
 }
 
 #post {
+  height: max-content;
+  width: max-content;
   padding: 3% 4%;
   font-size: 1.5rem;
 }
@@ -336,7 +332,7 @@ input {
 }
 
 #post:hover {
-  background: -webkit-linear-gradient(#04e762, #ffa723 70%);
+  background: -webkit-linear-gradient(#04e762, #ffa723 53%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
@@ -368,6 +364,8 @@ header {
   padding-top: 0.5%;
   height: 7%;
   font-size: 2.75rem;
+  word-spacing: 0.3em;
+  margin: 1% 2%;
 }
 
 header,
@@ -898,8 +896,6 @@ header,
   justify-content: center;
   align-items: center;
 
-  height: 3em;
-  width: 4em;
   border-radius: 0.5em;
   writing-mode: vertical-lr;
 }
@@ -949,8 +945,6 @@ footer {
   grid-column-end: span 1;
   grid-row-end: span 2;
 
-  height: 4em;
-  width: 3em;
   border-radius: 0.5em;
 }
 
@@ -966,8 +960,6 @@ footer {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  height: 4em;
-  width: 3em;
   border-radius: 0.5em;
 }
 
@@ -977,6 +969,7 @@ footer {
   grid-row-start: 1;
 
   font-size: 1.5rem;
+  word-spacing: 0.25em;
 }
 
 .race-again {
@@ -988,12 +981,13 @@ footer {
   grid-column-end: span 1;
   grid-row-start: 2;
 
+  text-align: center;
   height: 100%;
   width: 100%;
 }
 
 #race-again {
-  height: 100%;
+  height: max-content;
   width: max-content;
   padding: 1% 3%;
   font-size: 2.5rem;
@@ -1042,7 +1036,56 @@ footer {
   height: 75%;
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1700px) and (min-height: 980px) {
+  .crown {
+    font-size: 6rem;
+  }
+
+  #c1,
+  #c2,
+  #c3,
+  #c4,
+  #c5,
+  #c6,
+  #c7 {
+    padding: 0 0 0 15%;
+  }
+
+  #c8,
+  #c9,
+  #c10,
+  #c11,
+  #c12,
+  #c13,
+  #c14 {
+    padding: 0 15% 0 0;
+  }
+
+  #sr-wager-h1,
+  #tc-wager-h1 {
+    font-size: 7rem;
+  }
+
+  #sr-wager-h2,
+  #tc-wager-h2 {
+    font-size: 7rem;
+  }
+
+  #for-add-horse,
+  #one-dollar,
+  #five-dollars,
+  #ten-dollars,
+  #for-custom-wager,
+  #tc-one-dollar,
+  #tc-five-dollars,
+  #tc-ten-dollars,
+  #tc-for-custom-wager,
+  .choose-horse,
+  #post,
+  input {
+    font-size: 2rem;
+  }
+
   .horse,
   .go-back {
     height: 5em;
@@ -1071,5 +1114,368 @@ footer {
 
   #race-again {
     font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 1699px) {
+  .horse,
+  .go-back {
+    height: 5em;
+    width: 6em;
+  }
+
+  #card-deck,
+  #discard {
+    height: 6em;
+    width: 5em;
+  }
+
+  header {
+    font-size: 4rem;
+  }
+
+  #wager-pool {
+    font-size: 2rem;
+  }
+
+  #race-again {
+    font-size: 2.75rem;
+  }
+}
+
+@media (max-width: 1500px) {
+  .horse,
+  .go-back {
+    height: 4em;
+    width: 5em;
+  }
+
+  .horse {
+    border-radius: 1em;
+  }
+
+  #card-deck,
+  #discard {
+    height: 5em;
+    width: 4em;
+  }
+
+  header {
+    font-size: 4rem;
+  }
+
+  #wager-pool {
+    font-size: 2.5rem;
+  }
+
+  #race-again {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  .crown {
+    font-size: 4rem;
+  }
+
+  #c1,
+  #c2,
+  #c3,
+  #c4,
+  #c5,
+  #c6,
+  #c7 {
+    padding: 0 0 0 18%;
+  }
+
+  #c8,
+  #c9,
+  #c10,
+  #c11,
+  #c12,
+  #c13,
+  #c14 {
+    padding: 0 18% 0 0;
+  }
+
+  #sr-wager-h1,
+  #tc-wager-h1 {
+    font-size: 5rem;
+  }
+
+  #sr-wager-h2,
+  #tc-wager-h2 {
+    font-size: 5rem;
+    margin-bottom: 1%;
+  }
+
+  #for-add-horse,
+  #one-dollar,
+  #five-dollars,
+  #ten-dollars,
+  #for-custom-wager,
+  #tc-one-dollar,
+  #tc-five-dollars,
+  #tc-ten-dollars,
+  #tc-for-custom-wager,
+  .choose-horse,
+  #post,
+  input {
+    font-size: 2rem;
+    margin: 0.5% 0.5% 1% 0.5%;
+  }
+
+  input {
+    font-size: 1rem;
+    height: 60%;
+    margin-left: 2%;
+  }
+
+  .horse,
+  .go-back {
+    height: 3em;
+    width: 4em;
+  }
+
+  #card-deck,
+  #discard {
+    height: 4em;
+    width: 3em;
+  }
+}
+
+@media (max-width: 1300px) {
+  .info {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 1230px) {
+  .crown {
+    font-size: 3.5rem;
+  }
+
+  #c1,
+  #c2,
+  #c3,
+  #c4,
+  #c5,
+  #c6,
+  #c7 {
+    padding: 0 0 0 18%;
+  }
+
+  #c8,
+  #c9,
+  #c10,
+  #c11,
+  #c12,
+  #c13,
+  #c14 {
+    padding: 0 18% 0 0;
+  }
+
+  #sr-wager-h1,
+  #tc-wager-h1 {
+    font-size: 4.5rem;
+  }
+
+  #sr-wager-h2,
+  #tc-wager-h2 {
+    font-size: 4.5rem;
+    margin-bottom: 1%;
+  }
+
+  #for-add-horse,
+  #one-dollar,
+  #five-dollars,
+  #ten-dollars,
+  #for-custom-wager,
+  #tc-one-dollar,
+  #tc-five-dollars,
+  #tc-ten-dollars,
+  #tc-for-custom-wager,
+  .choose-horse,
+  #post,
+  input {
+    font-size: 1.75rem;
+    margin: 0.5% 0.5% 1% 0.5%;
+  }
+
+  input {
+    font-size: 1rem;
+    height: 75%;
+    margin-left: 2%;
+  }
+
+  .horse,
+  .go-back {
+    height: 2.75em;
+    width: 3.75em;
+    border-radius: 5px;
+  }
+
+  #card-deck,
+  #discard {
+    height: 3.75em;
+    width: 2.75em;
+    border-radius: 5px;
+  }
+
+  #wager-pool {
+    font-size: 2rem;
+  }
+
+  #race-again {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  #c1,
+  #c2,
+  #c3,
+  #c4,
+  #c5,
+  #c6,
+  #c7 {
+    padding: 0 0 0 18%;
+  }
+
+  #c8,
+  #c9,
+  #c10,
+  #c11,
+  #c12,
+  #c13,
+  #c14 {
+    padding: 0 18% 0 0;
+  }
+
+  #sr-wager-h1,
+  #tc-wager-h1 {
+    font-size: 4rem;
+  }
+
+  #sr-wager-h2,
+  #tc-wager-h2 {
+    font-size: 4rem;
+  }
+
+  #for-add-horse,
+  #one-dollar,
+  #five-dollars,
+  #ten-dollars,
+  #for-custom-wager,
+  #tc-one-dollar,
+  #tc-five-dollars,
+  #tc-ten-dollars,
+  #tc-for-custom-wager,
+  .choose-horse,
+  #post,
+  input {
+    font-size: 1.5rem;
+    margin: 1% 0.5% 2% 0.5%;
+  }
+
+  input {
+    font-size: 1rem;
+    height: 60%;
+    margin-left: 2%;
+  }
+
+  .horse,
+  .go-back {
+    height: 5em;
+    width: 6em;
+    writing-mode: vertical-lr;
+  }
+
+  .horse {
+    border-radius: 1em;
+  }
+
+  #card-deck,
+  #discard {
+    height: 6em;
+    width: 5em;
+    border-radius: 0.5em;
+  }
+
+  header {
+    font-size: 4rem;
+  }
+
+  #wager-pool {
+    font-size: 2.5rem;
+  }
+
+  #race-again {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-height: 1060px) {
+  .crown {
+    font-size: 5rem;
+  }
+
+  #c1,
+  #c2,
+  #c3,
+  #c4,
+  #c5,
+  #c6,
+  #c7 {
+    padding: 0 0 0 15%;
+  }
+
+  #c8,
+  #c9,
+  #c10,
+  #c11,
+  #c12,
+  #c13,
+  #c14 {
+    padding: 0 15% 0 0;
+  }
+
+  #sr-wager-h1,
+  #tc-wager-h1 {
+    font-size: 5rem;
+  }
+
+  #sr-wager-h2,
+  #tc-wager-h2 {
+    font-size: 5rem;
+  }
+
+  #for-add-horse,
+  #one-dollar,
+  #five-dollars,
+  #ten-dollars,
+  #for-custom-wager,
+  #tc-one-dollar,
+  #tc-five-dollars,
+  #tc-ten-dollars,
+  #tc-for-custom-wager,
+  .choose-horse,
+  #post,
+  input {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-height: 980px) {
+  .horse,
+  .go-back {
+    height: 3em;
+    width: 4em;
+  }
+
+  #card-deck,
+  #discard {
+    height: 4em;
+    width: 3em;
   }
 }
