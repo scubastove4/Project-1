@@ -22,7 +22,7 @@ The goal of Run the Horses is to bring the world's most famous race series right
 - HTML 5
 - CSS3
 - JS 6
-- Git
+- Git/Github
 
 ---
 
