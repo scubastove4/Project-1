@@ -279,7 +279,7 @@ input {
 
   margin-top: 1%;
   height: max-content;
-  width: max-content;
+  width: 100%;
   text-align: center;
 }
 
@@ -307,7 +307,7 @@ input {
 #post {
   height: max-content;
   width: max-content;
-  padding: 3% 4%;
+  padding: 1% 2%;
   font-size: 1.5rem;
 }
 
@@ -329,7 +329,7 @@ input {
 }
 
 #post:hover {
-  background: -webkit-linear-gradient(#04e762, #ffa723 53%);
+  background: -webkit-linear-gradient(#04e762, #ffa723 65%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
