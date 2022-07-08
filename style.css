@@ -85,15 +85,36 @@ h2 {
   height: max-content;
 }
 
+#index-sr:hover,
+#index-tc:hover {
+  cursor: pointer;
+}
+
 #index-sr {
   margin-right: 20%;
   box-shadow: -0.8px 2px 5px 1px #5c442a, 2px -0.8px 3px 1px #c9b88d;
+}
+
+#index-sr:hover#index-sr:active {
+  box-shadow: -1px 2.5px 5px 2px #5c442a, 2.5px -1px 3px 2px #c9b88d;
+}
+
+#index-sr:active {
+  box-shadow: -1.5px 3px 5px 3px #5c442a, 3px -1.5px 3px 3px #c9b88d;
 }
 
 #index-tc {
   padding: 2.8%;
   margin-left: 20%;
   box-shadow: 2px 2px 5px 1px #5c442a, -0.8px -0.8px 3px 1px #c9b88d;
+}
+
+#index-tc:hover {
+  box-shadow: 2.5px 2.5px 5px 2px #5c442a, -1px -1px 3px 2px #c9b88d;
+}
+
+#index-tc:active {
+  box-shadow: 3px 3px 5px 3px #5c442a, -1.5px -1.5px 3px 3px #c9b88d;
 }
 
 #index-sr,
