@@ -10,7 +10,7 @@
 
 ## **_Description_**
 
-![Triple_Crown](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fucd.kaplan.com.sg%2Fwp-content%2Fuploads%2F2017%2F08%2Ftriple-crown-glory.jpg&f=1&nofb=1)
+![Triple_Crown](pics-and-audio/tc.png)
 Run the Horses is the first project I completed as a student in the General Assembly Software Engineering Immersive program. This project was completed over the course of a week.
 
 The goal of Run the Horses is to bring the world's most famous race series right to your ~~table~~ desktop. A series of card flips will determine if you can win the Triple Crown... and more importantly the "money."
